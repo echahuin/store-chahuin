@@ -1,0 +1,48 @@
+.section{
+    height: 50vh;
+    width: 100%;
+}
+.contBanner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    width: 100%;
+}
+.contImg {
+    position: relative;
+    width: 50%;
+    height:80%;
+}
+.contText{
+    margin: 5rem;
+}
+
+@media only screen and (max-width: 56.25rem){
+   .section{
+    font-size: .9rem;
+    margin: 5rem 0rem
+   }
+    .contImg{
+         width: 80%;
+         height: 80%;  
+   }
+}
+@media only screen and (max-width: 37.5rem){
+    .section{
+        height: 30vh;
+        width: 100%;
+        font-size: .7rem;
+    }
+    .contBanner{
+        height: 40vh;
+    }
+    .contText{
+        margin: 0rem 3rem;
+    }
+    .contImg {
+        position: relative;
+        width: 100%;
+        height:70%;
+    }
+}

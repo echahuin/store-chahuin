@@ -1,0 +1,318 @@
+{
+   "dt": [
+        {
+            "typeBanner": "small-1",
+            "typeProduct": "Zapato dama",
+            "titleProduct": "Precios bajos en zapatos de dama",
+            "description": "",
+            "color": "#90D696",
+            "agentSlug": "zapato-dama-slug-ab23cd45",
+            "category": "zapato-dama-ab23cd45",
+            "productAgent": {
+                "id": "zz0nd0kt17j3hs7",
+                "name": "zapato dama",
+                "img": "/products/zapatoDama/1.jpg"
+            },
+            "products": [
+                {
+                    "title": "zapato tipo vestido",
+                    "description": "Los zapatos blancos con tacos de dama son un clásico de la moda femenina. Son un complemento perfecto para cualquier ocasión, desde un evento formal hasta una fiesta informal.     Estos zapatos se caracterizan por su diseño elegante y su color neutro. El blanco es un color que combina con todo, por lo que podrás usarlos con cualquier atuendo.",
+                    "price": 120,
+                    "category": "zapato-dama",
+                    "name": "zapato dama",
+                    "img": "/products/zapatoDama/1.jpg",
+                    "inStock": 10,
+                    "id": "e6adiqsbi6m2fue",
+                    "slug": "zapato-dama-e6adiqsbi6m2fue"
+                },
+                {
+                    "price": 100,
+                    "category": "zapato-dama",
+                    "name": "zapato dama",
+                    "img": "/products/zapatoDama/2.jpg",
+                    "inStock": 5,
+                    "id": "yqb542k5z8wj1p3",
+                    "slug": "zapato-dama-yqb542k5z8wj1p3"
+                },
+                {
+                    "price": 100,
+                    "category": "zapato-dama",
+                    "name": "zapato dama",
+                    "img": "/products/zapatoDama/3.jpg",
+                    "inStock": 5,
+                    "id": "jt9st4nnblkiier",
+                    "slug": "zapato-dama-jt9st4nnblkiier"
+                },
+                {
+                    "price": 100,
+                    "category": "zapato-dama",
+                    "name": "zapato dama",
+                    "img": "/products/zapatoDama/4.jpg",
+                    "inStock": 5,
+                    "id": "h6x1ebl4k4vhahh",
+                    "slug": "zapato-dama-h6x1ebl4k4vhahh"
+                },
+                {
+                    "price": 100,
+                    "category": "zapato-dama",
+                    "name": "zapato dama",
+                    "img": "/products/zapatoDama/5.jpg",
+                    "inStock": 5,
+                    "id": "raw107h8vtk2273",
+                    "slug": "zapato-dama-raw107h8vtk2273"
+                }
+            ]
+        },
+        {
+            "typeBanner": "small-1",
+            "typeProduct": "Zapato Hombre",
+            "titleProduct": "Precios bajos en zapatos de hombre",
+            "description": "",
+            "color": "#C0D690",
+            "agentSlug": "zapato-hombre-slug-ef56gh78",
+            "category": "zapato-hombre-ef56gh78",
+            "productAgent": {
+                "id": "ziu8e06bk9s2cwv",
+                "name": "zapato hombre",
+                "img": "/products/zapatoHombre/1.jpg"
+            },
+            "products": [
+                {
+                    "price": 100,
+                    "category": "zapato-hombre",
+                    "name": "zapato hombre",
+                    "img": "/products/zapatoHombre/1.jpg",
+                    "stock": 10,
+                    "id": "daf7mryyemkwazp",
+                    "slug": "zapato-dama-daf7mryyemkwazp"
+                },
+                {
+                    "price": 100,
+                    "category": "zapato-hombre",
+                    "name": "zapato hombre",
+                    "img": "/products/zapatoHombre/2.jpg",
+                    "stock": 10,
+                    "id": "8857vka36eq4rcr",
+                    "slug": "zapato-dama-8857vka36eq4rcr"
+                },
+                {
+                    "price": 100,
+                    "category": "zapato-hombre",
+                    "name": "zapato hombre",
+                    "img": "/products/zapatoHombre/3.jpg",
+                    "stock": 10,
+                    "id": "kumxqhgw429afz4",
+                    "slug": "zapato-dama-kumxqhgw429afz4"
+                },
+                {
+                    "price": 100,
+                    "category": "zapato-hombre",
+                    "name": "zapato hombre",
+                    "img": "/products/zapatoHombre/4.jpg",
+                    "stock": 10,
+                    "id": "7yx0vypn1w14m4t",
+                    "slug": "zapato-dama-7yx0vypn1w14m4t"
+                },
+                {
+                    "price": 100,
+                    "category": "zapato-hombre",
+                    "name": "zapato hombre",
+                    "img": "/products/zapatoHombre/5.jpg",
+                    "stock": 10,
+                    "id": "1mywz9rgry3p6jg",
+                    "slug": "zapato-dama-1mywz9rgry3p6jg"
+                },
+                {
+                    "price": 100,
+                    "category": "zapato-hombre",
+                    "name": "zapato hombre",
+                    "img": "/products/zapatoHombre/6.jpg",
+                    "stock": 10,
+                    "id": "vqw7venc4urt4oo",
+                    "slug": "zapato-dama-vqw7venc4urt4oo"
+                }
+            ]
+        },
+        {
+            "typeBanner": "small-2",
+            "typeProduct": "Jeans dama",
+            "titleProduct": "Precios bajos en jeans de dama",
+            "description": "",
+            "color": "#C0D690",
+            "agentSlug": "zapato-dama-slug-ij90klm12",
+            "category": "zapato-dama-ij90klm12",
+            "productAgent": {
+                "id": "y56vjet6rffow23",
+                "name": "Jeans dama",
+                "img": "/products/jeanDama/1.jpg"
+            },
+            "products": [
+                {
+                    "price": 100,
+                    "category": "jean-dama",
+                    "name": "jean dama",
+                    "img": "/products/jeanDama/1.jpg",
+                    "stock": 10,
+                    "id": "h4o166j5ozihks2",
+                    "slug": "jean-dama-h4o166j5ozihks2"
+                },
+                {
+                    "price": 100,
+                    "category": "jean-dama",
+                    "name": "jean dama",
+                    "img": "/products/jeanDama/2.jpg",
+                    "stock": 10,
+                    "id": "8xsu9r1q44526c2",
+                    "slug": "jean-dama-8xsu9r1q44526c2"
+                },
+                {
+                    "price": 100,
+                    "category": "jean-dama",
+                    "name": "jean dama",
+                    "img": "/products/jeanDama/3.jpg",
+                    "stock": 10,
+                    "id": "lz1dko90hj14rkh",
+                    "slug": "jean-dama-lz1dko90hj14rkh"
+                }
+            ]
+        },
+        {
+            "typeBanner": "small-2",
+            "typeProduct": "Camisa Hombre",
+            "titleProduct": "Precios bajos en camisas de hombres",
+            "description": "",
+            "color": "#ffffff",
+            "agentSlug": "camisa-hombre-slug-no34pqr56",
+            "category": "camisa-hombre-no34pqr56",
+            "productAgent": {
+                "id": "hlhnrjjesorvw1t",
+                "name": "camisa hombre",
+                "img": "/products/camisaHombre/1.jpg"
+            },
+            "products": [
+                {
+                    "price": 100,
+                    "category": "camisa-hombre",
+                    "name": "Camisa hombre",
+                    "img": "/products/camisaHombre/1.jpg",
+                    "stock": 10,
+                    "id": "7pcv9x400mfx2t6",
+                    "slug": "camisa-hombre-7pcv9x400mfx2t6"
+                },
+                {
+                    "price": 100,
+                    "category": "camisa-hombre",
+                    "name": "Camisa hombre",
+                    "img": "/products/camisaHombre/2.jpg",
+                    "stock": 10,
+                    "id": "s80u3yy5qhcjth4",
+                    "slug": "camisa-hombre-s80u3yy5qhcjth4"
+                },
+                {
+                    "price": 100,
+                    "category": "camisa-hombre",
+                    "name": "Camisa hombre",
+                    "img": "/products/camisaHombre/3.jpg",
+                    "stock": 10,
+                    "id": "w4gx65dlfw6gc9q",
+                    "slug": "camisa-hombre-w4gx65dlfw6gc9q"
+                },
+                {
+                    "price": 100,
+                    "category": "camisa-hombre",
+                    "name": "Camisa hombre",
+                    "img": "/products/camisaHombre/4.jpg",
+                    "stock": 10,
+                    "id": "7175989e1fdihsy",
+                    "slug": "camisa-hombre-7175989e1fdihsy"
+                },
+                {
+                    "price": 100,
+                    "category": "camisa-hombre",
+                    "name": "Camisa hombre",
+                    "img": "/products/camisaHombre/5.jpg",
+                    "stock": 10,
+                    "id": "k72mzrx8w4y0llw",
+                    "slug": "camisa-hombre-k72mzrx8w4y0llw"
+                }
+            ]
+        },
+        {
+            "typeBanner": "big-1",
+            "typeProduct": "Camisa dama",
+            "titleProduct": "Precios bajos en camisa de dama",
+            "description": "Aprovecha la promociones de verano 2023",
+            "color": "#D69790",
+            "agentSlug": "camisa-dama-slug-st78uvwx",
+            "category": "camisa-dama-st78uvwx",
+            "productAgent": {
+                "id": "o33anykc6b58kha",
+                "name": "camisa dama",
+                "img": "/products/camisaDama/1.jpg"
+            },
+            "products": [
+                {
+                    "price": 100,
+                    "category": "camisa-dama",
+                    "name": "camisa dama",
+                    "img": "/products/camisaDama/1.jpg",
+                    "stock": 10,
+                    "id": "vbx29rhj7nbpdwz",
+                    "slug": "camisa-dama-vbx29rhj7nbpdwz"
+                },
+                {
+                    "price": 100,
+                    "category": "camisa-dama",
+                    "name": "camisa dama",
+                    "img": "/products/camisaDama/2.jpg",
+                    "stock": 10,
+                    "id": "3eh19mwvqfgqqhu",
+                    "slug": "camisa-dama-3eh19mwvqfgqqhu"
+                }
+            ]
+        },
+        {
+            "typeBanner": "big-2",
+            "typeProduct": "buso dama",
+            "titleProduct": "Cierre de temporada en buso de dama",
+            "description": "Cerramos la temporada con precios bajos",
+            "color": "#D6D490",
+            "agentSlug": "buso-dama-slug-yz10abz2",
+            "category": "buso-dama-yz10abz2",
+            "productAgent": {
+                "id": "fw5f2emlgbcicu8",
+                "name": "buso dama",
+                "img": "/products/busoDama/1.jpg"
+            },
+            "products": [
+                {
+                    "price": 100,
+                    "category": "buso-dama",
+                    "name": "buso dama",
+                    "img": "/products/busoDama/1.jpg",
+                    "stock": 10,
+                    "id": "y69koq0y6fa4cy8",
+                    "slug": "buso-dama-y69koq0y6fa4cy8"
+                },
+                {
+                    "price": 100,
+                    "category": "buso-dama",
+                    "name": "buso dama",
+                    "img": "/products/busoDama/2.jpg",
+                    "stock": 10,
+                    "id": "e46hjgqpabpzepo",
+                    "slug": "buso-dama-e46hjgqpabpzepo"
+                },
+                {
+                    "price": 100,
+                    "category": "buso-dama",
+                    "name": "buso dama",
+                    "img": "/products/busoDama/3.jpg",
+                    "stock": 10,
+                    "id": "0gy34x5ousq9lv9",
+                    "slug": "buso-dama-0gy34x5ousq9lv9"
+                }
+            ]
+        }
+    ]  
+}

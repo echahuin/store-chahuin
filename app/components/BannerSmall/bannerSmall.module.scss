@@ -1,0 +1,39 @@
+.bannerSmall{
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20rem;
+    background: yellow;
+}
+.contBannerSmallImg {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+.contTextBannerSmall{
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 56.25rem){
+    .bannerSmall{
+        font-size: .9rem;
+        margin: 1rem 0rem;
+        flex-direction: row-reverse;
+    }
+}
+
+@media only screen and (max-width: 37.5rem){
+.bannerSmall{
+    height: 12rem;
+    font-size: .7rem;
+}
+.contBannerSmallImg{
+    width: 60%;
+}
+}

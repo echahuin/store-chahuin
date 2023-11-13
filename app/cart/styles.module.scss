@@ -1,0 +1,82 @@
+.contCar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #F1F1F1;
+}
+.contCarDetail{
+    height: 100vh;
+    padding: 2rem;
+    padding-top: 10rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+.contTemplate {
+    height: 68%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.contTemplate::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .contTemplate::-webkit-scrollbar-thumb {
+    background-color: #07070773;
+    border-radius: 6px;
+  }
+  
+  .contTemplate::-webkit-scrollbar-track {
+    background-color: #F1F1F1;
+  }
+
+  .contForm {
+    padding: 2rem;
+    padding-top: 10rem;
+  }
+  .contTotal{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  @media only screen and (max-width: 56.25rem){
+    .contCar {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .contCarDetail{
+        width: 100%;
+        padding: 0rem;
+        padding-top: 10rem;
+    }
+    .contTemplate {
+        
+        width: 100%;
+    }
+    .contForm {
+        padding: .5rem;
+        padding-top: 0rem;
+      }
+}
+
+@media only screen and (max-width: 35.5rem){
+    .contCar {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .contCarDetail{
+        width: 100%;
+        padding: 0rem;
+        padding-top: 10rem;
+    }
+    .contTemplate {
+        
+        width: 100%;
+    }
+}
