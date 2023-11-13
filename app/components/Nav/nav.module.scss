@@ -1,0 +1,113 @@
+.contNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 8rem;
+    width: 100%;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    z-index:20;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    
+}
+.contLogo{
+    margin: 0 5rem;
+    cursor: pointer;
+}
+// .contList ul {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     flex-direction: row;
+//     list-style: none;
+//     margin-left: 17rem;
+// }
+// .contList li {
+//     padding: 0 1rem;
+//     cursor: pointer;
+// }
+.contTools{
+    display: flex;
+    align-items: center;
+    margin: 0 2rem;
+}
+.contCart{
+    padding: 0 3rem;
+    cursor: pointer;
+}
+
+.searchInput {
+  width: 18rem;
+  height: 2.5rem;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  background-color: #fff;
+
+  &::placeholder {
+    padding-left: 1rem;
+    color: rgb(133, 133, 133);
+  }
+}
+
+.searchIcon{
+    margin-left: .5rem;
+    color: rgb(1, 1, 1);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 56.25rem){
+    .contNav{
+        height: auto;
+        background: rgb(0, 0, 0);
+    }
+    .contLogo{
+        margin: 0 .5rem;
+    }
+    .contTools{
+        margin: 0
+    }
+    .contCart{
+        padding: 0.5rem;
+    }
+    .searchInput {
+        width: 12rem;
+        height: 1.8rem;
+        &::placeholder {
+            font-size: .8rem;
+            padding-left: .5rem;
+          }
+    }
+    .searchIcon{
+        
+    }
+}
+
+@media only screen and (max-width: 37.5rem){
+    .contLogo{
+        margin: .5rem .55rem;
+        cursor: pointer;
+        align-items: flex-end;
+    }
+    .contNav{
+        height: auto;
+        background: rgb(0, 0, 0);
+        // flex-direction: column;
+        justify-content: space-between;
+    }
+    .contCart{
+        // padding-right: 0.5rem;
+    }
+    .searchInput {
+        width: 8rem;
+        height: 1.8rem;
+        &::placeholder {
+            font-size: .8rem;
+            padding-left: .5rem;
+        }
+    }
+}
