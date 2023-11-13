@@ -11,11 +11,17 @@ function BannerSmall({data}) {
   return (
     <div className={styles.bannerSmall} style={{background: `${color}`}}>
         <div className={styles.contTextBannerSmall} >
-            <h4>{typeProduct}</h4>
-            <h1>{titleProduct}</h1>
-            <Link  href={`/product/${category}`}>
-              <ButtonSmall text="Ver mas"/>
-            </Link>
+            {/* <div> */}
+              <h4>{typeProduct}</h4>
+            {/* </div> */}
+            {/* <div> */}
+              <h1>{titleProduct}</h1>
+            {/* </div> */}
+            <div className={styles.buttonDetail}>
+              <Link  href={`/product/${category}`}>
+                <ButtonSmall text="Ver mas"/>
+              </Link>
+            </div>
         </div>
         <div className={styles.contBannerSmallImg}>
           <Image

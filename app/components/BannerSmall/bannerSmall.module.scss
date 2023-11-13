@@ -2,7 +2,8 @@
     margin: 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     width: 100%;
     height: 20rem;
     background: yellow;
@@ -13,13 +14,19 @@
     height: 100%;
 }
 .contTextBannerSmall{
+    height: 100%;
     padding: 2rem;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: space-between;
     flex-direction: column;
 }
-
+.contTextBannerSmall h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: left;
+}
 @media only screen and (max-width: 56.25rem){
     .bannerSmall{
         font-size: .9rem;
