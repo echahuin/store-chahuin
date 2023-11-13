@@ -1,0 +1,16 @@
+.contDetail {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    background: red;
+}
+
+@media only screen and (max-width: 56.25rem){
+    .contDetail {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
