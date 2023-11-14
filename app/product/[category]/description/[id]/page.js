@@ -9,7 +9,7 @@ const Description = ({params}) => {
   
     const aux = data.dt.filter((item) => item.category === params.category)
     const aux2 = aux[0].products.filter((item) => item.id === params.id)
-    const {title, img, name, description} = aux2[0]
+    const {title, img, name, description, price} = aux2[0]
     console.log(aux2[0])
 
 

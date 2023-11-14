@@ -28,6 +28,9 @@
     margin-bottom: 1rem;
     text-align: left;
 }
+.contTextBannerSmall h4{
+    text-transform: uppercase;
+}
 @media only screen and (max-width: 56.25rem){
     .bannerSmall{
         font-size: .9rem;

@@ -27,7 +27,7 @@ function Card({ data }) {
         <p>{truncatedDescription}</p>
         <div className={styles.footerData}>
           <span>Stock: {inStock}</span>
-          <h3>{price}</h3>
+          <h3>{price}$</h3>
         </div>
       </div>
     </div>
