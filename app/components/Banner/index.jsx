@@ -20,8 +20,10 @@ function Banner({products}) {
                     />
                 </div>
                 <div className={styles.contText}>
-                    <h1 className={styles.title}>{titleProduct}</h1>
-                    <p className={styles.subtitle}>{description}</p>
+                    <div>
+                        <h1 className={styles.title}>{titleProduct}</h1>
+                        <p className={styles.subtitle}>{description}</p>
+                    </div>
                     <Link  href={`/product/${category}`}>
                         <ButtonSmall text="Ver mas"/>
                     </Link>

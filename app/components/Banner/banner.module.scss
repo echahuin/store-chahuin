@@ -15,7 +15,21 @@
     height:80%;
 }
 .contText{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 35%;
+    // width: 65%;
     margin: 5rem;
+}
+.contText h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.contText p {
+    margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 56.25rem){
@@ -27,6 +41,11 @@
          width: 80%;
          height: 80%;  
    }
+   .contText{
+     height: 45%;
+     padding-bottom: 4rem;
+     margin: 0rem 1rem;
+    }
 }
 @media only screen and (max-width: 37.5rem){
     .section{
@@ -36,9 +55,6 @@
     }
     .contBanner{
         height: 40vh;
-    }
-    .contText{
-        margin: 0rem 3rem;
     }
     .contImg {
         position: relative;

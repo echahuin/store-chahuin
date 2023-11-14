@@ -1,10 +1,10 @@
 import React from 'react'
 import style from './buttonSmall.module.scss'
 
-const ButtomSmall = ({text}) => {
+const ButtonSmall = ({text}) => {
   return (
     <div className={style.button}>{text}</div>
   )
 }
 
-export default ButtomSmall
+export default ButtonSmall

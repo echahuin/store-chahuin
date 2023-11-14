@@ -15,18 +15,15 @@ const Cart = () => {
           <TemplateCar />
         </div>
         <div className={styles.contTotal}>
-          <div class="sm:col-span-3" >
-                  Total
-            </div>
-            <span >
-                240$
-            </span>
+          <h1>
+            Total 1200$
+          </h1>
         </div>
       </div>
       <div  className={styles.contForm} >
-          <div className="border-b border-gray-900/10 pb-12">
+          <div className="border-b border-gray-900/10 pb-8 pt-11">
           <h2 class="text-base font-semibold leading-7 text-gray-900">Informacion personal</h2>
-          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="mt-19 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div class="sm:col-span-3">
               <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Nombre</label>
               <div class="mt-2">
@@ -53,8 +50,8 @@ const Cart = () => {
               <div className="mt-2">
                 <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
                   <option>Argentina</option>
-                  <option>Canada</option>
-                  <option>Mexico</option>
+                  <option>Brazil</option>
+                  <option>Peru</option>
                 </select>
               </div>
             </div>
@@ -86,7 +83,7 @@ const Cart = () => {
                 <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
               </div>
             </div>
-            <div class="sm:col-span-1">
+            <div className="flex justify-center items-center">
               <ButtonSmall text="Comprar" />
             </div>
           </div>

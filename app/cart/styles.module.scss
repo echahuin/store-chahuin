@@ -2,12 +2,12 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    background-color: #F1F1F1;
+    background-color: white
 }
 .contCarDetail{
-    height: 100vh;
+    height: 60vh;
     padding: 2rem;
-    padding-top: 10rem;
+    padding-top: 15rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -37,22 +37,22 @@
     padding-top: 10rem;
   }
   .contTotal{
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-evenly;
-    flex-direction: row;
+    padding-top: 2.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
   }
 
   @media only screen and (max-width: 56.25rem){
     .contCar {
         flex-direction: column;
         width: 100%;
-        align-items: center;
+        justify-content: center;
     }
     .contCarDetail{
         width: 100%;
-        padding: 0rem;
-        padding-top: 10rem;
+        padding-top: 1rem;
+        justify-content: flex-end;
+
     }
     .contTemplate {
         
@@ -69,14 +69,5 @@
         flex-direction: column;
         width: 100%;
         align-items: center;
-    }
-    .contCarDetail{
-        width: 100%;
-        padding: 0rem;
-        padding-top: 10rem;
-    }
-    .contTemplate {
-        
-        width: 100%;
     }
 }

@@ -1,8 +1,8 @@
 .card{
     margin: 1rem 2rem;
-    // height: auto !important;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    box-shadow: 0 0 5px rgba(182, 182, 182, 0.5);
 }
 .imgCard{
     height: 20rem;
@@ -11,10 +11,8 @@
 .descriptionCard{
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    background: rgb(218, 218, 218);
-    // padding: 2rem;
+    background: rgb(235, 235, 235);
     padding: 2rem 1.5rem 0rem 1.5rem;
-
     text-align: start;
 }
  .descriptionCard h1{
@@ -22,12 +20,10 @@
     font-weight: 500;
  }
  .descriptionCard p{
-    // margin: .2rem 0rem;
     margin: .5rem 0rem;
     font-size: 1rem;
     font-weight: 400;
     padding-bottom: 1.5rem;
-
  }
 
 .footerData{
@@ -41,7 +37,12 @@
    font-weight: 600;
 }
 .card:hover{
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.card:active{
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     transition: all 0.5s ease-in-out;
     cursor: pointer;
 }
@@ -60,7 +61,6 @@
         border-bottom-left-radius: .5rem;
         border-bottom-right-radius: .5rem;
         padding: .7rem;
-        // padding:.2rem
     }
     .descriptionCard h1{
         font-size: 1rem;

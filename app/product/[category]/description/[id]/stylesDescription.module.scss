@@ -1,6 +1,5 @@
 .contDescription{
     padding-top: 8rem;
-    // margin: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,12 +13,23 @@
     height: 80%;
 }
 .contTextBannerSmall{
+    height: 50%;
+    width: 40%;
     padding: 2rem;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
 }
+
+.contTextBannerSmall h1{
+    
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    // text-align: left;
+}
+
 @media only screen and (max-width: 56.25rem){
     .contDescription{
         flex-direction: column;
@@ -31,6 +41,9 @@
         width: 70%;
         height: 60%;
     }
+    .contTextBannerSmall {
+        width: 80%;
+    }
 }
 @media only screen and (max-width: 35.5rem){
     .contDescription{
@@ -39,4 +52,7 @@
     .contBannerSmallImg {
         width: 90%;
     }
+    // .contTextBannerSmall {
+    //     width: 80%;
+    // }
 }

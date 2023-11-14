@@ -3,7 +3,7 @@
         {
             "typeBanner": "small-1",
             "typeProduct": "Zapato dama",
-            "titleProduct": "Precios bajos en zapatos de dama",
+            "titleProduct": "zapatos de dama",
             "description": "",
             "color": "#90D696",
             "agentSlug": "zapato-dama-slug-ab23cd45",
@@ -179,7 +179,7 @@
         {
             "typeBanner": "small-2",
             "typeProduct": "Camisa Hombre",
-            "titleProduct": "Precios bajos en camisas de hombres",
+            "titleProduct": "Camisas de hombres",
             "description": "",
             "color": "#ffffff",
             "agentSlug": "camisa-hombre-slug-no34pqr56",
@@ -240,7 +240,7 @@
         {
             "typeBanner": "big-1",
             "typeProduct": "Camisa dama",
-            "titleProduct": "Precios bajos en camisa de dama",
+            "titleProduct": "Camisa de dama",
             "description": "Aprovecha la promociones de verano 2023",
             "color": "#D69790",
             "agentSlug": "camisa-dama-slug-st78uvwx",
@@ -274,7 +274,7 @@
         {
             "typeBanner": "big-2",
             "typeProduct": "buso dama",
-            "titleProduct": "Cierre de temporada en buso de dama",
+            "titleProduct": "Cierre de temporada en busos",
             "description": "Cerramos la temporada con precios bajos",
             "color": "#D6D490",
             "agentSlug": "buso-dama-slug-yz10abz2",

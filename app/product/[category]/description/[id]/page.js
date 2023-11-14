@@ -7,11 +7,10 @@ import ButtonSmall from '../../../../components/ButtonSmall'
 
 const Description = ({params}) => {
   
-    // console.log(data)
     const aux = data.dt.filter((item) => item.category === params.category)
     const aux2 = aux[0].products.filter((item) => item.id === params.id)
-    const {title, img, name} = aux2[0]
-    // console.log(aux2[0])
+    const {title, img, name, description} = aux2[0]
+    console.log(aux2[0])
 
 
     return (
@@ -26,31 +25,13 @@ const Description = ({params}) => {
         </div>
         <div className={styles.contTextBannerSmall} >
             <h4>{name}</h4>
-            <h1>{title}</h1>
-            {/* <Link  href={`/product/${category}`}> */}
-              <ButtonSmall text="Add Car"/>
-            {/* </Link> */}
+            <div>
+                <h1>{title}</h1>
+                <span>{description}</span>
+            </div>
+              <ButtonSmall text="Add car"/>
         </div>
     </div>
-    // <div className={styles.contDescription} >
-    //     <div className={styles.cont}>
-    //         <div className={styles.contImg}>
-    //         <Image
-    //             className={styles.img}
-    //             style={{objectFit: "cover"}}
-    //             src={img}
-    //             fill="responsive"
-    //             alt={name}
-    //         />
-    //         </div>
-    //     </div>
-    //     <div className={styles.contDescriptionDetail}>
-    //         <h1>
-    //             {name} 
-    //         </h1>
-    //         <ButtonSmall text="add car"/>
-    //     </div>
-    // </div>
   )
 }
 
