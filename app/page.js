@@ -1,27 +1,30 @@
 import Banner from './components/Banner'
 import PrincipalBanner from './components/PrincipalBanner'
-import Footer from './components/Footer'
+import Footer from './components/UI/Footer'
 import SectionBanner from './components/SectionBanner'
-import data from './data.json'
+import getDataBanner from './utils/getDataBanner'
 
-export default function Home() {
+const Home = async () => {
+  
+  const bigBannerData = await getDataBanner('small-1');
+  const smallBannerData = await getDataBanner('big-1');
+  const big2BannerData = await getDataBanner('small-2');
+  const small2BannerData = await getDataBanner('big-2');
 
-  const getDataBanner = (typeBanner) => {
-    return data.dt.filter((item) => item.typeBanner === typeBanner)
-  }
+  console.log(big2BannerData)
 
   return (
-    <>
-      <div style={{background: "#F1F1F1"}}>
-          <PrincipalBanner />
-
-          <SectionBanner products={getDataBanner("small-1")} />
-          <Banner products={getDataBanner("big-1")}  />      
-          <SectionBanner  products={getDataBanner("small-2")} />
-          <Banner products={getDataBanner("big-2")} />
-
-        <Footer/>
+      <div style={{ background: '#F1F1F1' }}>
+        <PrincipalBanner />  
+        
+        <SectionBanner products={bigBannerData} />
+        <Banner products={smallBannerData} />
+        <SectionBanner products={big2BannerData} />
+        <Banner products={small2BannerData} />
+        
+        <Footer /> 
+        {/* pasar footer al layout */}
       </div>
-    </>  
- )
-}
+  );
+};
+export  default Home

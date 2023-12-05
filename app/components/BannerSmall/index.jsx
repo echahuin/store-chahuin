@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './bannerSmall.module.scss';
 import Image from 'next/image'
 import Link from 'next/link'
-import ButtonSmall from '../ButtonSmall';
+import ButtonSmall from '../UI/ButtonSmall';
 
 function BannerSmall({data}) {
 

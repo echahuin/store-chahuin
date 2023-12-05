@@ -5,6 +5,7 @@ import Image from 'next/image';
 function Card({ data }) {
   const { name, title, description, price, img, inStock } = data;
 
+
   const truncatedDescription =
     description && description.length > 30
       ? description.substring(0, 30) + '...'

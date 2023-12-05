@@ -1,17 +1,17 @@
 import React from 'react'
-import data from '../../data.json'
 import Card from '../Card'
 import styles from './styles.module.scss'
 import Link from 'next/link'
+import getProductCategory from '@/app/utils/getProductCategory'
 
-const ProductList = ({category}) => {
+const ProductList = async({category}) => {
 
-  const aux = data.dt.filter((item) => item.category === category)
+  const dataResponse = await getProductCategory(category)
 
   return (
     <div className={styles.contCards}>
       {
-        aux[0].products.map((item, index) => {
+        dataResponse[0].products.map((item, index) => {
           return (
             <div key={index}>
               <Link href={`/product/${category}/description/${item.id}`} >

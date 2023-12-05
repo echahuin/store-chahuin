@@ -1,9 +1,14 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import styles from './nav.module.scss';
-import Link from 'next/link';
+import Link from 'next/link'
+import { useCartContext } from '@/app/context/CartContext';
 
 function Nav() {
+
+    const { addToCart } = useCartContext()
+
   return (
     <div className={styles.contNav}>
         <Link href={'/'}>
@@ -11,7 +16,6 @@ function Nav() {
                 <Image
                     src="/logoBlack.png"
                     width={90}
-                    // className="w-full h-full"
                     height={90}
                     alt="img logo"
                 />
@@ -19,7 +23,7 @@ function Nav() {
         </Link>
         <div className={styles.contTools} >
                 <input type="search" className={styles.searchInput} placeholder="Buscar" />
-                <Image src="/searchBlack.png" width={25} alt='search img' height={25} className={styles.searchIcon} />
+                <Image src="/searchBlack.png" width={25} alt='search img' height={25} className={styles.searchIcon} onClick={()=>addToCart({exito:"exito"})}/>
             <div className={styles.contCart} >
             <Link href={'/cart'}>
                 <div className=' w-7 md:w-24 lg:w-32'>

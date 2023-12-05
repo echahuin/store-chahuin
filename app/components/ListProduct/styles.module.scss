@@ -1,0 +1,53 @@
+
+.contCarDetail{
+    height: 90vh;
+    padding: 2rem;
+    padding-top: 15rem;
+    // background: red;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+.contTemplate {
+  // background-color: green;
+    height: 95rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.contTemplate::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .contTemplate::-webkit-scrollbar-thumb {
+    background-color: #07070773;
+    border-radius: 6px;
+  }
+  
+  .contTemplate::-webkit-scrollbar-track {
+    background-color: #F1F1F1;
+  }
+  .contTotal{
+    padding-top: 2.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 56.25rem){
+   
+    .contCarDetail{
+        width: 100%;
+        padding-top: 1rem;
+        justify-content: flex-end;
+
+    }
+    .contTemplate {
+        
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 35.5rem){
+    
+}

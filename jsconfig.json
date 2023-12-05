@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@context/*": ["./app/context/*"],
+      "@context/CartProvider": ["./app/context/CartProvider.js"] // Add the import path for CartProvider.js
     }
   }
 }

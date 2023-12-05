@@ -2,9 +2,10 @@ import React from 'react'
 import styles from './banner.module.scss';
 import Image from 'next/image'
 import Link from 'next/link'
-import ButtonSmall from '../ButtonSmall';
+import ButtonSmall from '../UI/ButtonSmall';
     
 function Banner({products}) {
+    console.log(products)
 
     const {color, titleProduct, description, productAgent, category} = products[0]
     

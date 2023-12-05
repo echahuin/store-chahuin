@@ -1,20 +1,20 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './stylesDescription.module.scss'
-import data from '../../../../data.json'
-import ButtonSmall from '../../../../components/ButtonSmall'
+import getProductCategoryId from '@/app/utils/getProductCategoryId'
+import ControllerProduct from '@/app/components/ControllerProduct'
 
 
-const Description = ({params}) => {
+const Description = async({params}) => {
+
+  const response = await getProductCategoryId(params)
+  // console.log(response[0])
   
-    const aux = data.dt.filter((item) => item.category === params.category)
-    const aux2 = aux[0].products.filter((item) => item.id === params.id)
-    const {title, img, name, description, price} = aux2[0]
-    console.log(aux2[0])
-
+  const {title, img, name, description, price} = response
+  // console.log('img', img)
 
     return (
-        <div className={styles.contDescription}>
+      <div className={styles.contDescription}>
         <div className={styles.contBannerSmallImg}>
           <Image
               style={{objectFit: "cover"}}
@@ -29,7 +29,7 @@ const Description = ({params}) => {
                 <h1>{title}</h1>
                 <span>{description}</span>
             </div>
-              <ButtonSmall text="Add car"/>
+            <ControllerProduct data={response}/>
         </div>
     </div>
   )
