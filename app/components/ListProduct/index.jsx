@@ -9,7 +9,6 @@ const ListProduct = ({data}) => {
         { 
             data.map((item, index)=>{
                 return <TemplateCar key={index} data={item}/>
-                
             })
         }
         </div>

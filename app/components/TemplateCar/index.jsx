@@ -32,7 +32,7 @@ const TemplateCar = ({ data}) => {
             </div>
         </div>
         <div className={styles.contButton} >
-            <ButtonSmall onClick={handleRemove()} text="X"/>
+            {/* <ButtonSmall onClick={handleRemove()} text="X"/> */}
             <span>240 $</span>
         </div>
     </div>
