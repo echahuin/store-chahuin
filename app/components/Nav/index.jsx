@@ -7,7 +7,7 @@ import { useCartContext } from '@/app/context/CartContext';
 
 function Nav() {
 
-    const { addToCart } = useCartContext()
+    const { cart } = useCartContext()
 
   return (
     <div className={styles.contNav}>
@@ -33,6 +33,10 @@ function Nav() {
                         height={30}
                         alt="img logo"
                         />
+                        {
+                            cart.length && 
+                            <div className={styles.totalItemCart} ><span>{cart.length}</span></div>
+                        }
                 </div>
             </Link>
             </div>

@@ -5,23 +5,22 @@ import Image from 'next/image';
 function Card({ data }) {
   const { name, title, description, price, img, inStock } = data;
 
-
   const truncatedDescription =
     description && description.length > 30
       ? description.substring(0, 30) + '...'
       : description;
 
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} group relative text-sm `}>
       <div className={styles.contImgCard}>
         <Image
-          className={styles.imgCard}
+          className={`${styles.imgCard} aspect-h-1 aspect-w-1 overflow-hidden bg-gray-100 group-hover:opacity-75`}
           style={{ objectFit: 'cover', position: 'relative' }}
           src={img}
           width={390}
           height={150}
           alt={`img ${name}`}
-        />
+          />
       </div>
       <div className={styles.descriptionCard}>
         <h1>{title}</h1>

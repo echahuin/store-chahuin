@@ -85,30 +85,9 @@
                 "img": "/products/zapatoHombre/1.jpg"
             },
             "products": [
+                
                 {
-                    "title": "Where does it come from?",
-                    "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-                    "price": 100,
-                    "category": "zapato-hombre",
-                    "name": "zapato hombre",
-                    "img": "/products/zapatoHombre/1.jpg",
-                    "stock": 10,
-                    "id": "daf7mryyemkwazp",
-                    "slug": "zapato-dama-daf7mryyemkwazp"
-                },
-                {
-                    "title": "Where does it come from?",
-                    "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-                    "price": 100,
-                    "category": "zapato-hombre",
-                    "name": "zapato hombre",
-                    "img": "/products/zapatoHombre/2.jpg",
-                    "stock": 10,
-                    "id": "8857vka36eq4rcr",
-                    "slug": "zapato-dama-8857vka36eq4rcr"
-                },
-                {
-                    "title": "Where does it come from?",
+                    "title": "Where does it come from? 2024",
                     "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
                     "price": 100,
                     "category": "zapato-hombre",
@@ -117,40 +96,8 @@
                     "stock": 10,
                     "id": "kumxqhgw429afz4",
                     "slug": "zapato-dama-kumxqhgw429afz4"
-                },
-                {
-                    "title": "Where does it come from?",
-                    "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-                    "price": 100,
-                    "category": "zapato-hombre",
-                    "name": "zapato hombre",
-                    "img": "/products/zapatoHombre/4.jpg",
-                    "stock": 10,
-                    "id": "7yx0vypn1w14m4t",
-                    "slug": "zapato-dama-7yx0vypn1w14m4t"
-                },
-                {
-                    "title": "Where does it come from?",
-                    "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-                    "price": 100,
-                    "category": "zapato-hombre",
-                    "name": "zapato hombre",
-                    "img": "/products/zapatoHombre/5.jpg",
-                    "stock": 10,
-                    "id": "1mywz9rgry3p6jg",
-                    "slug": "zapato-dama-1mywz9rgry3p6jg"
-                },
-                {
-                    "title": "Where does it come from?",
-                    "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-                    "price": 100,
-                    "category": "zapato-hombre",
-                    "name": "zapato hombre",
-                    "img": "/products/zapatoHombre/6.jpg",
-                    "stock": 10,
-                    "id": "vqw7venc4urt4oo",
-                    "slug": "zapato-dama-vqw7venc4urt4oo"
                 }
+              
             ]
         },
         {

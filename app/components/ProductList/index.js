@@ -15,7 +15,7 @@ const ProductList = async({category}) => {
           return (
             <div key={index}>
               <Link href={`/product/${category}/description/${item.id}`} >
-                <Card data={item} />
+                <Card  data={item} />
               </Link>
             </div>
             )

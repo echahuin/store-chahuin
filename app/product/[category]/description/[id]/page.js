@@ -8,10 +8,11 @@ import ControllerProduct from '@/app/components/ControllerProduct'
 const Description = async({params}) => {
 
   const response = await getProductCategoryId(params)
-  // console.log(response[0])
+
+  console.log(params)
   
   const {title, img, name, description, price} = response
-  // console.log('img', img)
+  console.log(response)
 
     return (
       <div className={styles.contDescription}>
@@ -28,8 +29,14 @@ const Description = async({params}) => {
             <div>
                 <h1>{title}</h1>
                 <span>{description}</span>
+                <div className='p-5'>
+                  <h1 >
+                    <span>Price: </span>
+                    {price}$
+                  </h1>
+                </div>
             </div>
-            <ControllerProduct data={response}/>
+            <ControllerProduct typeCategoryGeneral={params.category} data={response}/>
         </div>
     </div>
   )

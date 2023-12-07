@@ -2,16 +2,10 @@ import React from 'react'
 import styles from './templateCar.module.scss';
 import ButtonSmall from '../UI/ButtonSmall'
 import Image from 'next/image'
-import { useCartContext } from '@/app/context/CartContext';
+import Link from 'next/link'
 
-const TemplateCar = ({ data}) => {
-
-    const { removeFromCart } = useCartContext()
-    console.log(data)
-
-    const handleRemove = ()=>{
-        removeFromCart(data)
-    }
+const TemplateCar = ({ handleDelete, data }) => {
+    const category = data.typeCategoryGeneral
 
   return (
     <div className={styles.ContCar}>
@@ -27,13 +21,16 @@ const TemplateCar = ({ data}) => {
             <div className={styles.contDetail}>
                     <h4>{data.category}</h4>
                     <h1>{data.title}</h1>
-                    <span>Cantidad: <strong>{data.cantidad}</strong></span>
+                    <span>Cantidad: <strong>{data.quantity}</strong></span>
                     <span>Precio: <strong>{data.price} $</strong></span>
             </div>
         </div>
         <div className={styles.contButton} >
-            {/* <ButtonSmall onClick={handleRemove()} text="X"/> */}
-            <span>240 $</span>
+            <ButtonSmall onClick={()=>handleDelete(data.id)} text="X"/>
+            <div className='pr-4 pt-5 ' style={{ color: 'blue' }}>
+                <Link href={`/product/${category}/description/${data.id}`} >Agregar...</Link>
+            </div>
+            <span>{data.totalParcial}$</span>
         </div>
     </div>
   )
