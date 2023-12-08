@@ -6,7 +6,7 @@ const PaymentPage = () => {
   return (
     <div className={styles.contPayment}>
         <Form />
-    </div>
+    </div> 
   )
 }
 
