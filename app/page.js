@@ -9,6 +9,7 @@ const Home = async () => {
   const bigBannerData = await getDataBanner('small-1');
   const smallBannerData = await getDataBanner('big-1');
   const big2BannerData = await getDataBanner('small-2');
+  // console.log(big2BannerData[1])
   const small2BannerData = await getDataBanner('big-2');
 
   return (

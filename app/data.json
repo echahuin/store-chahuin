@@ -100,55 +100,7 @@
               
             ]
         },
-        {
-            "typeBanner": "small-2",
-            "typeProduct": "Jeans dama",
-            "titleProduct": "Jeans de dama",
-            "description": "",
-            "color": "#C0D690",
-            "agentSlug": "jean-dama-slug-ij90klm12",
-            "category": "jean-dama-ij90klm12",
-            "productAgent": {
-                "id": "y56vjet6rffow23",
-                "name": "Jeans dama",
-                "img": "/products/jeanDama/1.jpg"
-            },
-            "products": [
-                {
-                    "title": "Where does it come from?",
-                    "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-                    "price": 100,
-                    "category": "jean-dama",
-                    "name": "jean dama",
-                    "img": "/products/jeanDama/1.jpg",
-                    "stock": 10,
-                    "id": "h4o166j5ozihks2",
-                    "slug": "jean-dama-h4o166j5ozihks2"
-                },
-                {
-                    "title": "Where does it come from?",
-                    "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-                    "price": 100,
-                    "category": "jean-dama",
-                    "name": "jean dama",
-                    "img": "/products/jeanDama/2.jpg",
-                    "stock": 10,
-                    "id": "8xsu9r1q44526c2",
-                    "slug": "jean-dama-8xsu9r1q44526c2"
-                },
-                {
-                    "title": "Where does it come from?",
-                    "description": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-                    "price": 100,
-                    "category": "jean-dama",
-                    "name": "jean dama",
-                    "img": "/products/jeanDama/3.jpg",
-                    "stock": 10,
-                    "id": "lz1dko90hj14rkh",
-                    "slug": "jean-dama-lz1dko90hj14rkh"
-                }
-            ]
-        },
+        
         {
             "typeBanner": "small-2",
             "typeProduct": "Camisa Hombre",

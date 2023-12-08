@@ -10,10 +10,10 @@ export async function GET(_, {params}) {
     const productsRef = collection(db, "products")
     const q = query(productsRef, where('category', '==', category))
     const querySnapshot = await getDocs(q)
+    // console.log(querySnapshot)
     const docs = querySnapshot.docs.map(doc => doc.data())
     const product = docs[0].products.find(item => item.id === id);
 
-    // console.log(product)
     
     return NextResponse.json(product);
 

@@ -5,7 +5,15 @@ import Link from 'next/link'
 import ButtonSmall from '../UI/ButtonSmall';
     
 function Banner({products}) {
-    // console.log(products)
+
+    console.log(products)
+    // let color
+    // if (products.length === 0) {
+    //     // Handle the case where the array is empty
+    //   } else {
+    //     color = products[0].color;
+    //     // Use the destructured value "color"
+    //   }
 
     const {color, titleProduct, description, productAgent, category} = products[0]
     
