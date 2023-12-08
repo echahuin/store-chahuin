@@ -6,7 +6,7 @@ import ListProductCart from '../components/ListProductCart'
 
 const Cart = () => {
   const onSubmit = (values)=>{
-    console.log(values)
+    // console.log(values)
   }
 
   return (

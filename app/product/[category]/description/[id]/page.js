@@ -8,11 +8,8 @@ import ControllerProduct from '@/app/components/ControllerProduct'
 const Description = async({params}) => {
 
   const response = await getProductCategoryId(params)
-
-  console.log(params)
   
   const {title, img, name, description, price} = response
-  console.log(response)
 
     return (
       <div className={styles.contDescription}>

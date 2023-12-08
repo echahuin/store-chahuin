@@ -5,7 +5,7 @@ import Link from 'next/link'
 import ButtonSmall from '../UI/ButtonSmall';
     
 function Banner({products}) {
-    console.log(products)
+    // console.log(products)
 
     const {color, titleProduct, description, productAgent, category} = products[0]
     

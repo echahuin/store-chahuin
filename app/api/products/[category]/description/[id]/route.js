@@ -13,7 +13,7 @@ export async function GET(_, {params}) {
     const docs = querySnapshot.docs.map(doc => doc.data())
     const product = docs[0].products.find(item => item.id === id);
 
-    console.log(product)
+    // console.log(product)
     
     return NextResponse.json(product);
 
