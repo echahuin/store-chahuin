@@ -15,8 +15,8 @@ function Nav() {
             <div className={`${styles.contLogo} w-16 md:w-24 lg:w-32`} >
                 <Image
                     src="/logoBlack.png"
-                    width={90}
-                    height={90}
+                    width={105}
+                    height={105}
                     alt="img logo"
                 />
             </div>

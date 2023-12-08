@@ -11,8 +11,6 @@ const Home = async () => {
   const big2BannerData = await getDataBanner('small-2');
   const small2BannerData = await getDataBanner('big-2');
 
-  console.log(big2BannerData)
-
   return (
       <div style={{ background: '#F1F1F1' }}>
         <PrincipalBanner />  
