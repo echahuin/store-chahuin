@@ -1,4 +1,3 @@
-"use client"
 import Banner from './components/Banner'
 import PrincipalBanner from './components/PrincipalBanner'
 import Footer from './components/UI/Footer'
