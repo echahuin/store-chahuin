@@ -1,7 +1,7 @@
 // import Banner from './components/Banner'
 import PrincipalBanner from './components/PrincipalBanner'
 import Footer from './components/UI/Footer'
-import SectionBanner from './components/SectionBanner'
+// import SectionBanner from './components/SectionBanner'
 // import getDataBanner from './utils/getDataBanner'
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
       <div style={{ background: '#F1F1F1' }}>
         <PrincipalBanner />  
         
-        <SectionBanner />
+        {/* <SectionBanner /> */}
         {/* <Banner products={smallBannerData} /> */}
         {/* <SectionBanner products={big2BannerData} />
         <Banner products={small2BannerData} /> */}
