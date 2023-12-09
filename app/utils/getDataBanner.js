@@ -1,6 +1,8 @@
 const getDataBanner = async (typeBanner) => {
 
-    const response = await fetch(`http://localhost:3000/api/typeBanners/${typeBanner}`);
+  const url = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'
+
+    const response = await fetch(`${url}/api/typeBanners/${typeBanner}`);
     if (!response.ok) {
       console.error(`Failed to fetch data: ${response.status}`);
       return [];

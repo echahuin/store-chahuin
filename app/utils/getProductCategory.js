@@ -1,7 +1,9 @@
 
 const getProductCategory = async (category) => {
 
-    const response = await fetch(`http://localhost:3000/api/products/${category}`);
+    const url = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'
+
+    const response = await fetch(`${url}/api/products/${category}`);
     if (!response.ok) {
         console.error(`Failed to fetch data: ${response.status}`);
         return [];
