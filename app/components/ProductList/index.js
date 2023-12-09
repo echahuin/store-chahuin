@@ -7,7 +7,7 @@ import getProductCategory from '@/app/utils/getProductCategory'
 const ProductList = async({category}) => {
 
   const dataResponse = await getProductCategory(category)
-  console.log(dataResponse[0].products)
+  // console.log(dataResponse[0].products)
 
   return (
     <div className={styles.contCards}>

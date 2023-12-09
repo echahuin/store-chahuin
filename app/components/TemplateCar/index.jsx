@@ -25,13 +25,13 @@ const TemplateCar = ({ handleDelete, data }) => {
                     <span>Precio: <strong>{data.price} $</strong></span>
             </div>
         </div>
-        <div className={styles.contButton} >
+        {/* <div className={styles.contButton} >
             <ButtonSmall onClick={()=>handleDelete(data.id)} text="X"/>
             <div className='pr-4 pt-5 ' style={{ color: 'blue' }}>
                 <Link href={`/product/${category}/description/${data.id}`} >Agregar...</Link>
             </div>
             <span>{data.totalParcial}$</span>
-        </div>
+        </div> */}
     </div>
   )
 }

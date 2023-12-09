@@ -25,7 +25,7 @@ function Nav() {
                 <input type="search" className={styles.searchInput} placeholder="Buscar" />
                 <Image src="/searchBlack.png" width={25} alt='search img' height={25} className={styles.searchIcon} onClick={()=>addToCart({exito:"exito"})}/>
             <div className={styles.contCart} >
-            <Link href={'/cart'}>
+            {/* <Link href={'/cart'}>
                 <div className=' w-7 md:w-24 lg:w-32'>
                     <Image
                         src="/carrito.png"
@@ -38,7 +38,7 @@ function Nav() {
                             <div className={styles.totalItemCart} ><span>{cart.length}</span></div>
                         }
                 </div>
-            </Link>
+            </Link> */}
             </div>
         </div>
     </div>

@@ -7,13 +7,7 @@ import ButtonSmall from '../UI/ButtonSmall';
 function BannerSmall({data}) {
 
   console.log(data)
-  // let color 
-  // if (data.length === 0) {
-  //   // Handle the case where the array is empty
-  // } else {
-  //   color = data;
-  //   // Use the destructured value "color"
-  // }
+
   const {color, typeProduct, titleProduct, productAgent, category} = data
 
   return (

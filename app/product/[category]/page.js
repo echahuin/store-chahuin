@@ -1,21 +1,21 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import Styles from './stylesProduct.module.scss'
 import Filters from '../../components/Filters'
 import ProductList from '../../components/ProductList'
 
 
-function product({params}) {
+function Product({params}) {
 
   const {category } = params
 
   return (
     <div className={Styles.contDetail} >
         <Filters />
-        <Suspense fallback={<div className="w-full h-full justify-content:center align-items:center">Loading...</div>}>
+        {/* <Suspense fallback={<div className="w-full h-full justify-content:center align-items:center">Loading...</div>}> */}
           <ProductList category={category}/>
-        </Suspense>
+        {/* </Suspense> */}
     </div>
   )
 }
 
-export default product
+export default Product
