@@ -5,7 +5,7 @@ import SectionBanner from './components/SectionBanner'
 // import getDataBanner from './utils/getDataBanner'
 
 const Home = () => {
-  
+
   // const bigBannerData = await getDataBanner('small-1');
   // const smallBannerData = await getDataBanner('big-1');
   // const big2BannerData = await getDataBanner('small-2');
@@ -22,8 +22,7 @@ const Home = () => {
         {/* <SectionBanner products={big2BannerData} />
         <Banner products={small2BannerData} /> */}
         
-        <Footer /> 
-        {/* pasar footer al layout */}
+        <Footer />
       </div>
   );
 };
