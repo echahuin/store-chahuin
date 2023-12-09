@@ -16,9 +16,9 @@ const Home = async() => {
         <PrincipalBanner />  
         
           <SectionBanner products={bigBannerData} />
-          {/* <Banner products={smallBannerData} /> */}
+          <Banner products={smallBannerData} />
           <SectionBanner products={big2BannerData} />
-          {/* <Banner products={small2BannerData} /> */}
+          <Banner products={small2BannerData} />
         
         <Footer /> 
       </div>
