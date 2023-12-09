@@ -2,7 +2,7 @@
 import PrincipalBanner from './components/PrincipalBanner'
 import Footer from './components/UI/Footer'
 import SectionBanner from './components/SectionBanner'
-// import getDataBanner from './utils/getDataBanner'
+import getDataBanner from './utils/getDataBanner'
 
 const Home = async () => {
 
