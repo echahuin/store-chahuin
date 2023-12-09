@@ -9,7 +9,7 @@ export async function GET(_, {params}) {
     const q = query(productsRef, where('category', '==', category))
     const querySnapshot = await getDocs(q)
     const docs = querySnapshot.docs.map(doc => doc.data())
-    // console.log('this docs',docs)
+    console.log('this docs',docs)
     
     return NextResponse.json(docs);
 

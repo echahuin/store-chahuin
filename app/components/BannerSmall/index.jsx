@@ -6,13 +6,10 @@ import ButtonSmall from '../UI/ButtonSmall';
 
 function BannerSmall({data}) {
 
-  // console.log(data)
-
-  const { typeProduct, titleProduct, productAgent, category} = data
+  const {color, typeProduct, titleProduct, productAgent, category} = data
 
   return (
-    // <div className={styles.bannerSmall} style={{background: `${color}`}}>
-    <div className={styles.bannerSmall} >
+    <div style={{background: `${color}`}} className={styles.bannerSmall} >
       <div className={styles.contTextBannerSmall} >
               <h4>{typeProduct}</h4>
               <h1>{titleProduct}</h1>

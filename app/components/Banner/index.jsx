@@ -3,25 +3,13 @@ import styles from './banner.module.scss';
 import Image from 'next/image'
 import Link from 'next/link'
 import ButtonSmall from '../UI/ButtonSmall';
-import  getDataBanner  from '../../utils/getDataBanner'
     
-const Banner = async({type}) => {
+const Banner = async({products}) => {
 
-    const smallBannerData = await getDataBanner(type);
-
-    // console.log(products)
-    // let color
-    // if (products.length === 0) {
-    //     // Handle the case where the array is empty
-    //   } else {
-    //     color = products[0].color;
-    //     // Use the destructured value "color"
-    //   }
-
-    const { titleProduct, description, productAgent, category} = smallBannerData[0]
+    const {color, titleProduct, description, productAgent, category} = products[0]
     
     return (
-        <section className={styles.section}>
+        <section style={{background: `${color}`}} className={styles.section}>
             <div className={styles.contBanner}>
                 <div className={styles.contImg}>
                     <Image
