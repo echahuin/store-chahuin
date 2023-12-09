@@ -6,7 +6,7 @@ import ButtonSmall from '../UI/ButtonSmall';
 
 function BannerSmall({data}) {
 
-  console.log(data)
+  // console.log(data)
 
   const {color, typeProduct, titleProduct, productAgent, category} = data
 
