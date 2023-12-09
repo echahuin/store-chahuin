@@ -7,15 +7,15 @@ import ListProduct from '../components/ListProduct'
 
 const Cart = () => {
 
-  const { cart } = useCartContext()
+  // const { cart } = useCartContext()
   const onSubmit = (values)=>{
     console.log(values)
   }
 
   return (
     <div className={styles.contCar} >
-      <ListProduct data={cart} />
-      <Form onSubmit={onSubmit} values={{}} />
+      {/* <ListProduct data={cart} />
+      <Form onSubmit={onSubmit} values={{}} /> */}
     </div>
   )
 }
