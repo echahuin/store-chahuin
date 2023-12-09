@@ -4,7 +4,7 @@ import Footer from './components/UI/Footer'
 import SectionBanner from './components/SectionBanner'
 import getDataBanner from './utils/getDataBanner'
 
-const Home = async () => {
+const Home = async () => { 
 
   // const bigBannerData = await getDataBanner('small-1');
   // const smallBannerData = await getDataBanner('big-1');
