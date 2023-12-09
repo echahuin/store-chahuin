@@ -18,10 +18,10 @@ const Banner = async({type}) => {
     //     // Use the destructured value "color"
     //   }
 
-    const {color, titleProduct, description, productAgent, category} = smallBannerData[0]
+    const { titleProduct, description, productAgent, category} = smallBannerData[0]
     
     return (
-        <section style={{background: `${color}` }} className={styles.section}>
+        <section className={styles.section}>
             <div className={styles.contBanner}>
                 <div className={styles.contImg}>
                     <Image
