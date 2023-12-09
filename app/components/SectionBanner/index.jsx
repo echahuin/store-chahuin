@@ -1,11 +1,9 @@
 import React from 'react'
 import BannerSmall from '../BannerSmall'
 import styles from './sectionBanner.module.scss';
-import getDataBanner from '../../utils/getDataBanner';
+// import getDataBanner from '../../utils/getDataBanner';
 
-const  SectionBanner = async () => {
-
-  const bigBannerData = await getDataBanner('small-1');
+const  SectionBanner = ({products}) => {
 
   // console.log('this bigBannerData', bigBannerData)
 
@@ -14,7 +12,7 @@ const  SectionBanner = async () => {
   // console.log('response', response.json())
   return (
         <section className={styles.contSectionBanner}>
-          {bigBannerData.map((product, index) => <BannerSmall key={index} data={product} />)}
+          {products.map((product, index) => <BannerSmall key={index} data={product} />)}
         </section>
     )
 }
