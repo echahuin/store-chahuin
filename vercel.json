@@ -1,0 +1,6 @@
+{
+    "crons": [{
+      "path": "/api/products/${category}",
+      "schedule": "0 10 * * *"
+    }]
+  }
