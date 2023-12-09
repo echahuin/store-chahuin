@@ -1,7 +1,7 @@
 
 const getProductCategory = async (category) => {
 
-    const url = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'
+    const url = process.env.VERCEL_URL ? `http://${process.env.VERCEL_URL}` : 'http://localhost:3000'
 
     const response = await fetch(`${url}/api/products/${category}`);
     if (!response.ok) {
