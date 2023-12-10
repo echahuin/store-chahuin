@@ -8,7 +8,7 @@ const Home = async () => {
 
   // const bigBannerData = await getDataBanner('small-1');
   // const smallBannerData = await getDataBanner('big-1');
-  const big2BannerData = await getDataBanner('small-2');
+  // const big2BannerData = await getDataBanner('small-2');
   // const small2BannerData = await getDataBanner('big-2');
 
   // console.log(big2BannerData)
@@ -22,8 +22,8 @@ const Home = async () => {
         
         <SectionBanner products={bigBannerData} />
         {/* <Banner products={smallBannerData} /> */}
-        <SectionBanner products={big2BannerData} />
-        {/* <Banner products={small2BannerData} /> */}
+        {/* <SectionBanner products={big2BannerData} />
+        <Banner products={small2BannerData} /> */}
         
         <Footer />
       </div>
