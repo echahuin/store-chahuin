@@ -8,15 +8,17 @@ const ProductList = async({category}) => {
 
   const dataResponse = await getProductCategory(category)
 
+  console.log(dataResponse)
+
   return (
     <div className={styles.contCards}>
       {
-        dataResponse[0].products.map((item, index) => {
+        dataResponse.map((item, index) => {
           return (
             <div key={index}>
-              <Link href={`/product/${category}/description/${item.id}`} >
-                <Card  data={item} />
-              </Link>
+              {/* <Link href={`/product/description/${dataResponse[0].slug}`} > */}
+                <Card  data={item}  />
+              {/* </Link> */}
             </div>
             )
           })
@@ -24,5 +26,6 @@ const ProductList = async({category}) => {
     </div>
   )
 }
+
 
 export default ProductList

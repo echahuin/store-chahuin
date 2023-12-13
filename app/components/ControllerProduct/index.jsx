@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import ButtonSmall from '../UI/ButtonSmall';
 import { useCartContext } from '@/app/context/CartContext';
 
-const ControllerProduct = ({typeCategoryGeneral, data}) => {
+const ControllerProduct = ({ data}) => {
+
     const { addToCart } = useCartContext()
     
     const [count, setCount] = useState(0);
@@ -21,9 +22,7 @@ const ControllerProduct = ({typeCategoryGeneral, data}) => {
     const handleAddToCart = () => {
         addToCart({
             ...product,
-            quantity: count,
-            totalParcial: count * product.price,
-            typeCategoryGeneral
+            quantity: count
         })
     }
 

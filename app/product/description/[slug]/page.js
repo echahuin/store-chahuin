@@ -1,14 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './stylesDescription.module.scss'
-import getProductCategoryId from '@/app/utils/getProductCategoryId'
+import getProductCategorySlug from '@/app/utils/getProductCategorySlug'
 import ControllerProduct from '@/app/components/ControllerProduct'
 
 
 const Description = async({params}) => {
 
-  const response = await getProductCategoryId(params)
+  const response = await getProductCategorySlug(params)
   
+  console.log(response)
+
   const {title, img, name, description, price} = response
 
     return (
@@ -33,7 +35,7 @@ const Description = async({params}) => {
                   </h1>
                 </div>
             </div>
-            <ControllerProduct typeCategoryGeneral={params.category} data={response}/>
+            <ControllerProduct data={response}/>
         </div>
     </div>
   )

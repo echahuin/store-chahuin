@@ -12,7 +12,7 @@ function PrincipalBanner() {
     dots: true,
 	  fade:true,
     infinite: true,
-    speed: 1500,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true, 
@@ -25,25 +25,34 @@ function PrincipalBanner() {
       <Slider {...settings}>
       <div className={styles.contBannerImg}>
           <Image
+              layout="responsive"
               style={{objectFit: "cover"}}
               src="/1.png"
-              fill={true}
+              // fill={true}
+              width={100}
+              height={100}
               alt="electronics banner"
               />
       </div>
       <div className={styles.contBannerImg}>
           <Image
+              layout="responsive"
               style={{objectFit: "cover"}}
               src="/2.png"
-              fill={true}
+              // fill={true}
+              width={100}
+              height={100}
               alt="electronics banner"
               />
       </div>
       <div className={styles.contBannerImg}>
           <Image
+              layout="responsive"
               style={{objectFit: "cover"}}
               src="/3.png"
-              fill={true}
+              // fill={true}
+              width={100}
+              height={100}
               alt="electronics banner"
               />
       </div>

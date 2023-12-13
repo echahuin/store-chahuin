@@ -4,15 +4,31 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ButtonSmall from '../UI/ButtonSmall';
 
+// img: '/products/busoDama/1.jpg',
+// title: 'Where does it come from?',
+// price: 2500,
+// category: 'buso dama',
+// banner: true,
+// stock: 12,
+// dataBanner: {
+//   descriptionBanner: '',
+//   typeBanner: 'small-1',
+//   image: '/products/busoDama/1.jpg',
+//   color: '#D6D490',
+//   titleBanner: 'Cierre de temporada en busos'
+// }
+
 function BannerSmall({data}) {
 
-  const {color, typeProduct, titleProduct, productAgent, category} = data
+  console.log(data)
+  const { category } = data
+  const {image, color, titleBanner} = data.dataBanner
 
   return (
     <div style={{background: `${color}`}} className={styles.bannerSmall} >
       <div className={styles.contTextBannerSmall} >
-              <h4>{typeProduct}</h4>
-              <h1>{titleProduct}</h1>
+              <h4>{category}</h4>
+              <h1>{titleBanner}</h1>
             <div className={styles.buttonDetail}>
               <Link  href={`/product/${category}`}>
                 <ButtonSmall text="Ver mas"/>
@@ -22,9 +38,9 @@ function BannerSmall({data}) {
         <div className={styles.contBannerSmallImg}>
           <Image
               style={{objectFit: "cover"}}
-              src={productAgent.img}
+              src={image}
               fill={true}
-              alt={`img ${productAgent.name}`}
+              alt={`img ${category}`}
               />
         </div>
     </div>

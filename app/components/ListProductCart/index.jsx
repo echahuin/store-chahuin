@@ -8,15 +8,17 @@ import Link from 'next/link'
 const ListProductCart = () => {
 
     const {cart, removeFromCart } = useCartContext()
+    console.log(cart)
 
     const totalPrice = cart.reduce((acc, item)=>{
-        return acc + item.totalParcial
+        const totalPrice = item.quantity * item.price
+        return acc + totalPrice
     }, 0)
 
-    const handleDeletedata = (id) => {
-        removeFromCart(id)
+    const handleDeletedata = (slug) => {
+        removeFromCart(slug)
     }
-    
+
   return (
 
     <div className={styles.contCarDetail} >
