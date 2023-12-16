@@ -1,23 +1,31 @@
 "use client"
-
 import React, {useState} from 'react'
 import ButtonSmall from '@/app/components/UI/ButtonSmall'
 import styles from './styles.module.scss'
 // import { Switch } from "@tailwindcss/forms";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { CATEGORIES } from '@/app/const/optionsCategory'
 import { doc, setDoc } from "firebase/firestore";
-import { db } from '@/app/firebase/config'
+import { db, storage } from '@/firebase/config'
 
-const createProduct = async (values) => {
 
-  const docRef = doc(db, "products", values.slug);
-  return setDoc(docRef, {...values})
-  .then(()=> console.log('Exito al crear el producto'))
+const createProduct = async (values, file) => {
+
+  const storageRef = ref(storage, values.slug)
+  const fileSnapshot = await uploadBytes(storageRef, file)
+  const fileURL = await getDownloadURL( fileSnapshot.ref )
+
+  const docRef = doc(db, "products", values.slug)
+  return setDoc(docRef, {
+      ...values,
+      img: fileURL
+  }).then(() => console.log("Producto creado exitosamente"))
 }
 
 const CreateForm = () => {
 
   // const [valueBanner, setvalueBanner] = useState(false);
+  const [file, setFile] = useState(null)
   const [values, setValues] = useState({
     slug: '',
     title: '',
@@ -45,8 +53,8 @@ const CreateForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(values)
-    await createProduct(values)
+    console.log('this values and file', {values, file})
+    await createProduct(values, file)
   }
 
   return (
@@ -140,6 +148,22 @@ const CreateForm = () => {
                 />              
               </div>
             </div>
+            <div class="sm:col-span-4">
+              <label for="file" class="block text-sm font-medium leading-6 text-gray-900">image</label>
+              <div class="mt-2">
+                <input 
+                  type="file" 
+                  // accept="image/*" 
+                  allowMultiple={false}
+                  required 
+                  className='block w-full border p-2 my-2' 
+                  onChange={(e) => setFile(e.target.files[0])}
+                />               
+              </div>
+            </div>
+
+
+
             {/* <div className="sm:col-span-4">
               <label htmlFor={"banner"} className="block text-sm font-medium leading-6 text-gray-900">
                 banner
