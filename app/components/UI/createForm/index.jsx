@@ -235,7 +235,7 @@ const CreateForm = () => {
           </div>
         </div>
       </div>
-      <ButtonSmall type="submit" onClick={handleSubmit} text="Add product" />
+      <ButtonSmall type="submit" text="Add product" />
     </form>
     </div>
   )

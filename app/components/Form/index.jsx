@@ -24,7 +24,7 @@ const Form = ({ onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-           <div className="pt-40">
+        <div className="pt-40">
           <div className="border-b border-gray-900/10 pb-8 pt-11">
           <h2 class="text-center font-semibold leading-7 text-gray-900 pb-5">Informacion personal</h2>
           <div class="mt-19 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">

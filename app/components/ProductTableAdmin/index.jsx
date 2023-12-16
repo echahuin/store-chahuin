@@ -1,6 +1,6 @@
 import React from 'react'
-import style from './style.module.css'
-import Table from '@/app/components/Table'
+import style from './style.module.scss'
+import ButtonLogout from '@/app/components/UI/ButtonLogout'
 import ButtonSmall from '@/app/components/UI/ButtonSmall'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -11,6 +11,10 @@ const ProductTableAdmin = async() => {
 
     return (
     <div className={style.contTable}>
+        <div className={style.controlHeadTablesUser} >
+            <h1>User data</h1>
+            <ButtonLogout text={"Log out"}/>
+        </div>
         <div className={style.controlHeadTables} >
             <h1>Products</h1>
             <Link href={'/admin/create'}><ButtonSmall text={"add Product"}/></Link>
