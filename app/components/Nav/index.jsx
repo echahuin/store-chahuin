@@ -28,7 +28,12 @@ function Nav() {
         <div className={styles.contTools} >
             
             { user.logged ? <div className={styles.contDataUser}>
-                    { user.rol === 'admin' && <Link href={'/admin'}><span>Panel</span></Link>}
+            
+                { user.rol === 'admin' && 
+                    <div className={styles.contLinkAdmin}>
+                        <Link href={'/admin'}><span>Panel</span></Link>
+                    </div>
+                }
                 <div className={styles.contLogOut}>
                     <ButtonLogout text={'Salir'}/>
                 </div>

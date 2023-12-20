@@ -10,15 +10,12 @@ const ProductTableAdmin = async() => {
     const items = await fetch('http://localhost:3000/api/products/all').then(res => res.json()) 
 
     return (
-    <div className={style.contTable}>
-        {/* <div className={style.controlHeadTablesUser} >
-            <h1>User data</h1>
-            <ButtonLogout text={"Log out"}/>
-        </div> */}
+    <>
         <div className={style.controlHeadTables} >
             <h1>Products</h1>
             <Link href={'/admin/create'}><ButtonSmall text={"add Product"}/></Link>
         </div>
+    <div className={style.contTable}>
         <div className={style.tables}>
          <table>
           <thead>
@@ -37,8 +34,8 @@ const ProductTableAdmin = async() => {
           
           <tbody>
             {items.map((item, index)=>{
-                return (
-                    <tr key={index}>
+              return (
+                <tr key={index}>
                     <td><Image src={item.img} width={50} height={50} alt=''/></td>
                     <td>{item.category}</td>
                     <td>{item.description.substring(0, 30) + '...'}</td>
@@ -50,11 +47,12 @@ const ProductTableAdmin = async() => {
                     <td className='cursor-pointer' ><Link href={'/admin/edit'} className="text-red-500">Delete...</Link></td>
                     </tr>
                 )
-            })}
+              })}
             </tbody>
             </table>
         </div>
       </div>
+  </>
   )
 }
 

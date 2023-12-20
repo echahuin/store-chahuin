@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import styles from './principalBanner.module.scss';
 import Slider from 'react-slick';
@@ -19,43 +19,44 @@ function PrincipalBanner() {
     autoplaySpeed: 4000,
 	  arrows: false,    
   };
+  
+  const [imageSrc, setImageSrc] = useState([]);
+
+  useEffect(() => {
+  
+    const windowWidth = window.innerWidth;
+    if(windowWidth > 1024) { 
+      setImageSrc(["/bannerDesktop/1.png", "/bannerDesktop/2.png", "/bannerDesktop/3.png"]);
+    }
+
+    if (windowWidth <= 1024) {
+      setImageSrc(["/bannerTablet/1.png", "/bannerTablet/2.png", "/bannerTablet/3.png"]);
+    }
+
+    if (windowWidth <= 768) {
+      setImageSrc(["/bannerMobile/1.png", "/bannerMobile/2.png", "/bannerMobile/3.png"]);
+    }
+  }, []);
+
 
   return (
     <div className={styles.PrincipalBanner}>
       <Slider {...settings}>
-      <div className={styles.contBannerImg}>
-          <Image
-              layout="responsive"
-              style={{objectFit: "cover"}}
-              src="/1.png"
-              // fill={true}
-              width={100}
-              height={100}
-              alt="electronics banner"
-              />
-      </div>
-      <div className={styles.contBannerImg}>
-          <Image
-              layout="responsive"
-              style={{objectFit: "cover"}}
-              src="/2.png"
-              // fill={true}
-              width={100}
-              height={100}
-              alt="electronics banner"
-              />
-      </div>
-      <div className={styles.contBannerImg}>
-          <Image
-              layout="responsive"
-              style={{objectFit: "cover"}}
-              src="/3.png"
-              // fill={true}
-              width={100}
-              height={100}
-              alt="electronics banner"
-              />
-      </div>
+        { imageSrc.map((src, index)=>{
+            return (
+              <div key={index} className={styles.contBannerImg}>
+                <Image
+                  layout="responsive"
+                  style={{objectFit: "cover"}}
+                  src={src}
+                  width={100}
+                  height={100}
+                  alt={`electronics banner ${index}`}
+                />
+              </div>
+            )
+          })
+        }
       </ Slider>
     </div>
   )

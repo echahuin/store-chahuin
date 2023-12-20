@@ -40,7 +40,7 @@
    
     .contCarDetail{
         width: 100%;
-        padding-top: 1rem;
+        margin-top: 7rem;
         justify-content: flex-end;
 
     }
@@ -51,5 +51,8 @@
 }
 
 @media only screen and (max-width: 35.5rem){
-    
+  .contCarDetail{
+    padding: .5rem;
+
+}
 }

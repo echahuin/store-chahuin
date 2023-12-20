@@ -3,7 +3,7 @@ import ProductTableAdmin from '../components/ProductTableAdmin'
 
 const Admin = () => {
   return (
-   <ProductTableAdmin />
+    <ProductTableAdmin />
   )
 }
 

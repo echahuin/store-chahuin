@@ -18,22 +18,26 @@
     text-align: center;
     font-size: 1.2rem;
     font-weight: 800;
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.6rem;
+    height: 1.6rem;
 }
+
 .contLogo{
     margin: 0 10rem;
     cursor: pointer;
 }
+
 .contTools{
     display: flex;
     align-items: center;
     margin: 0 4rem;
 }
+
 .contCart{
     padding: 0 0rem;
     cursor: pointer;
 }
+
 .login {
     font-size: 1.2rem;
     font-weight: 600;
@@ -48,26 +52,34 @@
 
 .contDataUser{
     text-align: center;
-    width: 30rem;
+    width: auto;
     display: flex;
     align-items: center;
-    // justify-content: space-evenly
 }
 
 .contUser {
-display: flex;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    // padding-left: 1rem;
-
+    margin: 0rem 3rem;
+    margin-left: 0rem;
+}
+.contLinkAdmin{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 3rem;
 }
 
 
-@media only screen and (max-width: 62.25rem){
+@media only screen and (max-width: 64rem){
     .contNav{
-        height: auto;
+        height: 6rem;
         background: rgb(0, 0, 0);
+    }
+    .login {
+        font-size: .9rem;
+        margin-right: .5rem;
     }
     .contLogo{
         margin: 0 .5rem;
@@ -76,50 +88,45 @@ align-items: center;
         margin: 0
     }
     .contCart{
-        padding: 0.5rem;
+        padding: 0 1rem;
     }
-    .searchInput {
-        width: 12rem;
-        height: 1.8rem;
-        &::placeholder {
-            font-size: .8rem;
-            padding-left: .5rem;
-          }
+    .contLinkAdmin{
+        font-size: 1rem;
+        margin-right: 2rem;
     }
-    .searchIcon{
-        
+    .contUser {
+        margin: 0rem 3rem;
     }
 }
 
-@media only screen and (max-width: 37.5rem){
-    .contLogo{
-        margin: .0rem .0rem;
-        cursor: pointer;
-        align-items: flex-end;
-    }
+@media only screen and (max-width: 28rem){
     .contNav{
-        height: auto;
-        background: rgb(0, 0, 0);
-        // flex-direction: column;
         justify-content:center;
-        // padding-right: 0.5rem;
+    }
+    .contLogo{
+        margin: .5rem;
+        cursor: pointer;
+        align-items: center;
+    }
+    .login {
+        font-size: .9rem;
+        margin-right: 0rem;
+
     }
     .contCart{
-    justify-content: center;
+        margin: .5rem;
+        padding: .5rem;
+        justify-content: center;
     }
-    .searchInput {
-        width: 8rem;
-        height: 1.8rem;
-        &::placeholder {
-            font-size: .8rem;
-            padding-left: .5rem;
-        }
+    .contLinkAdmin{
+        font-size: .8rem;
+        margin: .5rem;
+        padding: .5rem;
     }
-    .contDataUser{
-    width: auto;
+    .contUser {
+        margin: 1rem;
     }
-    .contLogOut{
-        width: 5rem;
-        // margin: 0rem .5rem;
+    .contUser span {
+        font-size: .8rem;
     }
 }

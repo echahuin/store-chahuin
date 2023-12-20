@@ -13,15 +13,20 @@
     height: 80%;
 }
 .contTextBannerSmall{
-    height: 50%;
+    height: 60%;
     width: 40%;
-    padding: 2rem;
+    padding: 0rem 3rem;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
 }
-
+.contDetailText h1{
+    font-size: 1.5rem;
+}
+.contDetailText span{
+    font-size: 1.2rem;
+}
 .contTextBannerSmall h1{
     font-size: 1.5rem;
     font-weight: 700;
@@ -31,7 +36,13 @@
     text-transform: uppercase;
 }
 
-@media only screen and (max-width: 56.25rem){
+.contPrice{
+    padding: 2rem;
+    // font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 64rem){
     .contDescription{
         flex-direction: column;
         font-size: 1rem;
@@ -46,14 +57,24 @@
         width: 80%;
     }
 }
-@media only screen and (max-width: 35.5rem){
+@media only screen and (max-width: 28rem){
     .contDescription{
         font-size: .9rem;
     }
     .contBannerSmallImg {
-        width: 90%;
+        width: 100%;
     }
-    // .contTextBannerSmall {
-    //     width: 80%;
-    // }
+    .contDetailText span{
+        font-size: .9rem;
+    }
+    .contTextBannerSmall{
+        width: 100%;
+        padding: 0rem 1.5rem;
+    }
+    .contTextBannerSmall h1{
+        margin-top: .5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
 }

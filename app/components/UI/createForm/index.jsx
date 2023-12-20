@@ -96,12 +96,12 @@ const CreateForm = () => {
   }
 
   return (
-    <div className={styles.contFormCreate}>
+
     <form onSubmit={handleSubmit}>
-      <div className="pt-40">
-        <div className="border-b border-gray-900/10 pb-8 pt-11">
-          <h2 class="text-center font-semibold leading-7 text-gray-900 pb-5">Form add product</h2>
-          <div class="mt-19 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+    <div>
+      <div className="border-b border-gray-900/10 pb-8 pt-11">
+      <h2 class="text-center font-semibold leading-7 text-gray-900 pb-5">Datos - producto</h2>
+      <div class="mt-19 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div class="sm:col-span-3">
               <label for="slug" class="block text-sm font-medium leading-6 text-gray-900">Slug</label>
               <div class="mt-2">
@@ -109,21 +109,20 @@ const CreateForm = () => {
                     type='text'
                     value={values.slug}
                     required 
-                    className='block w-full border p-2 my-2' 
+										className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     name='slug' 
                     onChange={handleChange} 
                 />              
               </div>
             </div>
-
             <div class="sm:col-span-3">
-              <label for="title" class="block text-sm font-medium leading-6 text-gray-900">Title</label>
-              <div class="mt-2">
-                <input 
+               <label for="title" class="block text-sm font-medium leading-6 text-gray-900">Title</label>
+               <div class="mt-2">
+                 <input 
                     type='text'
                     value={values.title}
                     required 
-                    className='block w-full border p-2 my-2' 
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" 
                     name='title' 
                     onChange={handleChange} 
                 />              
@@ -137,7 +136,7 @@ const CreateForm = () => {
                     type='number'
                     value={values.price}
                     required 
-                    className='block w-full border p-2 my-2' 
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" 
                     name='price' 
                     onChange={handleChange} 
                 />              
@@ -150,7 +149,7 @@ const CreateForm = () => {
                 <input 
                     type='number'
                     required 
-                    className='block w-full border p-2 my-2' 
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     name='stock' 
                     value={values.stock}
                     onChange={handleChange} 
@@ -180,16 +179,15 @@ const CreateForm = () => {
                     type='text'
                     value={values.description}
                     required 
-                    className='block w-full border p-2 my-2' 
-                    name='description' 
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"                    name='description' 
                     onChange={handleChange} 
                 />              
               </div>
             </div>
             <div class="sm:col-span-4">
-              <label for="file" class="block text-sm font-medium leading-6 text-gray-900">image</label>
-              <div class="mt-2">
-                <input 
+               <label for="file" class="block text-sm font-medium leading-6 text-gray-900">image</label>
+               <div class="mt-2">
+                 <input 
                   type="file" 
                   accept="image/*" 
                   allowMultiple={false}
@@ -199,12 +197,25 @@ const CreateForm = () => {
                 />               
               </div>
             </div>
-          </div>
-        </div>
       </div>
-      <ButtonSmall type="submit" text="Add product" />
-    </form>
     </div>
+  </div>
+  <ButtonSmall type="submit" text="Comprar" />
+</form>
+
+    // <form onSubmit={handleSubmit}>
+    //   <div className="pt-50">
+    //     <div className="border-b border-gray-900/10 pb-8 pt-11">
+    //       <h2 class="text-center font-semibold leading-7 text-gray-900 pb-5">Form add product</h2>
+    //       <div class="mt-19 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+
+    //        
+    //         
+    //       </div>
+    //     </div>
+    //   </div>
+    //   <ButtonSmall type="submit" text="Add product" />
+    // </form>
   )
 }
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from '../Card'
 import styles from './styles.module.scss'
-import Link from 'next/link'
 import getProductCategory from '@/app/utils/getProductCategory'
 
 const ProductList = async({category}) => {
@@ -14,9 +13,7 @@ const ProductList = async({category}) => {
         dataResponse.map((item, index) => {
           return (
             <div key={index}>
-              {/* <Link href={`/product/description/${dataResponse[0].slug}`} > */}
                 <Card  data={item}  />
-              {/* </Link> */}
             </div>
             )
           })

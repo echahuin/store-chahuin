@@ -44,6 +44,8 @@
 
   @media only screen and (max-width: 56.25rem){
     .contCar {
+      background-color: rgb(236, 236, 236);
+
         flex-direction: column;
         width: 100%;
         justify-content: center;
@@ -66,8 +68,17 @@
 
 @media only screen and (max-width: 35.5rem){
     .contCar {
+      background-color: rgb(236, 236, 236);
+      padding: 0;
+    margin: 0;
         flex-direction: column;
         width: 100%;
-        align-items: center;
+        align-items: flex-start;
     }
+    .contCarDetail{
+      // width: 100%;
+      padding-top: 0rem;
+      justify-content: flex-start;
+
+  }
 }

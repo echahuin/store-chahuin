@@ -22,13 +22,12 @@ const Description = async({params}) => {
         </div>
         <div className={styles.contTextBannerSmall} >
             <h4>{name}</h4>
-            <div>
+            <div className={styles.contDetailText} >
                 <h1>{title}</h1>
                 <span>{description}</span>
-                <div className='p-5'>
-                  <h1 >
-                    <span>Price: </span>
-                    {price}$
+                <div className={styles.contPrice}>
+                  <h1>
+                    Price: {price}$
                   </h1>
                 </div>
             </div>

@@ -3,9 +3,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* justify-content: space-between; */
     height: 100vh;
-    padding-top: 10rem;
+    padding-top: 0rem;
     background-color: #ffffff;
 }
 .contTable h1{
@@ -23,13 +22,12 @@
     padding: .5rem;
 }
 .contTable table{
-    text-align: start;
+    text-align: flex-start;
     width: 80%;
     border-collapse: collapse;
     background-color: #fff;
     box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
     border-radius: 10px;
-    /* padding-top: 2rem */
 }
 .contTable table thead tr th{
     padding: 10px 10px;
@@ -50,22 +48,45 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: 100rem;
     margin: 1rem;
 }
 .controlHeadTables{
+    padding-top: 15rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
-    width: 80%;
-    margin: 1rem;
 }
 
-.controlHeadTablesUser {
-    padding: 5rem 0rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 80%;
+@media only screen and (max-width: 64rem){
+    .contTable{
+        align-items: flex-start;
+        overflow: scroll;
+    }
+    .contTable table{
+        width: 100%;
+    }
+    .controlHeadTables{
+        padding-top: 15rem;
+        justify-content: space-between;
+        padding: 10rem 2rem ;
+        padding-bottom: 0rem;
+    }
+    .controlHeadTables h1 {
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
     
+    .contTable table thead tr th{
+        padding: 5px 5px;
+        font-size: .9rem;
+    }
+    .contTable table tbody tr td{
+
+        padding: 5px 5px;
+        // color: #000;
+        font-size: .9rem;
+        // font-weight: 300;
+        // border-bottom: 1px solid #000000;
+    }
 }
