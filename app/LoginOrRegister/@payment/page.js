@@ -1,8 +1,8 @@
 import React from 'react'
-import Form from '../components/Form'
+import Form from '../../components/Form'
 import styles from './styles.module.scss' 
 
-const PaymentPage = () => {
+const Payment = () => {
   return (
     <div className={styles.contPayment}>
         <Form />
@@ -10,4 +10,4 @@ const PaymentPage = () => {
   )
 }
 
-export default PaymentPage
+export default Payment

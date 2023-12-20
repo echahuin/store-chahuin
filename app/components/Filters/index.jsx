@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './filters.module.scss';
+import Image from 'next/image'
 
 const Filters = () => {
   return (
@@ -25,7 +26,11 @@ const Filters = () => {
           </div>
         </div> */}
       {/* </div> */}
-        <div>
+        <div className={styles.contSearch}>
+          <input type="search" className={styles.searchInput} placeholder="Buscar" />
+          <Image src="/searchIcon.svg" width={35} alt='search img' height={35} className={styles.searchIcon} />
+        </div>
+        <div className={styles.contSelect}>
             <select id="products" name="products" className={styles.select}>                
                 <option value="all">All</option>
                 <option value="shoes">Shoes</option>

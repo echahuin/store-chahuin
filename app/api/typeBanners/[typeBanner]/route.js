@@ -13,7 +13,7 @@ export async function GET(_, {params}) {
   const docs = querySnapshot.docs.map(doc => doc.data())
   const data = docs.filter(doc => doc.dataBanner.typeBanner === typeBanner)
 
-  console.log(data)
+  // console.log(data)
 
   return NextResponse.json({data});
 }

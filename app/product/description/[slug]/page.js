@@ -8,9 +8,6 @@ import ControllerProduct from '@/app/components/ControllerProduct'
 const Description = async({params}) => {
 
   const response = await getProductCategorySlug(params)
-  
-  console.log(response)
-
   const {title, img, name, description, price} = response
 
     return (

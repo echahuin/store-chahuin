@@ -1,20 +1,18 @@
 .contFilters {
-    width: 18rem;
+    width: 30rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
+    align-items: flex-start;
     height: 100vh;
     background: rgb(222, 221, 221);
     padding: 2rem;
-    // padding-left: 2rem;
 }
-.contSelect{
-    // margin-bottom: 5rem;
-}
+
 .select {
     width: 100%;
     height: 40px;
-    padding: 0 10px;
+    // padding: 0 10px;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     background-color: #fff;
@@ -55,7 +53,6 @@
   
   .inputMax{
     padding-top: 2rem;
-    // width: 2rem;
   }
 
   .inputMaxStyle {
@@ -74,6 +71,39 @@
       color: rgb(127, 127, 127);
     }
   }
+
+  .contSearch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .searchInput {
+    width: 18rem;
+    height: 2.5rem;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    background-color: #fff;
+  
+    &::placeholder {
+      padding-left: 1rem;
+      color: rgb(133, 133, 133);
+    }
+  }
+  
+  .searchIcon{
+      margin-left: .5rem;
+      color: rgb(1, 1, 1);
+      cursor: pointer;
+  }
+
+  .contSelect{
+    padding: 2rem 0rem;
+  }
+
 
   @media only screen and (max-width: 56.25rem){
     .contFilters{

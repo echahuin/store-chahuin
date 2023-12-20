@@ -4,10 +4,14 @@ import Image from 'next/image'
 import styles from './nav.module.scss';
 import Link from 'next/link'
 import { useCartContext } from '@/app/context/CartContext';
+import { useAuthContext } from '@/app/context/AuthContext';
+import ButtonLogout from '../UI/ButtonLogout';
+
 
 function Nav() {
 
     const { cart } = useCartContext()
+    const { user } = useAuthContext()
 
   return (
     <div className={styles.contNav}>
@@ -22,23 +26,45 @@ function Nav() {
             </div>
         </Link>
         <div className={styles.contTools} >
-                <input type="search" className={styles.searchInput} placeholder="Buscar" />
-                <Image src="/searchBlack.png" width={25} alt='search img' height={25} className={styles.searchIcon} onClick={()=>addToCart({exito:"exito"})}/>
-            <div className={styles.contCart} >
-            <Link href={'/cart'}>
-                <div className=' w-7 md:w-24 lg:w-32'>
+            
+            { user.logged ? <div className={styles.contDataUser}>
+                    { user.rol === 'admin' && <Link href={'/admin'}><span>Panel</span></Link>}
+                <div className={styles.contLogOut}>
+                    <ButtonLogout text={'Salir'}/>
+                </div>
+                <div className={`${styles.contUser} w-7 md:w-24 lg:w-32`}>
                     <Image
-                        src="/carrito.png"
-                        width={30}
-                        height={30}
+                        src="/user.png"
+                        width={45}
+                        height={45}
                         alt="img logo"
                         />
-                        {
-                            cart.length && 
-                            <div className={styles.totalItemCart} ><span>{cart.length}</span></div>
-                        }
+                    <span>{user.displayName}</span>
                 </div>
-            </Link>
+                </div>
+                
+                :
+                <Link href={'/LoginOrRegister'}>
+                    <div className={styles.login}>
+                        <span>Iniciar Sesión</span>
+                    </div>
+                </Link>
+            }
+            <div className={styles.contCart} >
+                <Link href={'/cart'}>
+                    <div className=' w-7 md:w-24 lg:w-32'>
+                        <Image
+                            src="/carrito.png"
+                            width={30}
+                            height={30}
+                            alt="img logo"
+                            />
+                            {
+                                cart.length && 
+                                <div className={styles.totalItemCart} ><span>{cart.length}</span></div>
+                            }
+                    </div>
+                </Link>
             </div>
         </div>
     </div>

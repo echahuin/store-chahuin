@@ -9,8 +9,6 @@ export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
 
-    console.log(cart)
-
     const addToCart = (product) => {
         if (isInCart(product)) {
             const newCart = cart.map((item) => {

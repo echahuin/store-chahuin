@@ -5,9 +5,54 @@ import styles from './styles.module.scss'
 // import { Switch } from "@tailwindcss/forms";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { CATEGORIES } from '@/app/const/optionsCategory'
-import { doc, setDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc, writeBatch } from "firebase/firestore";
 import { db, storage } from '@/firebase/config'
 
+
+// const createOrder = async (values, items) => {
+
+//   const docsPromises = items.map((slug) => {
+//     const docRef = doc(db, "products", slug)
+//     return getDoc(docRef)
+//   })
+
+//   const docs = await Promise.all(docsPromises)
+//   const batch = writeBatch(db)
+//   const outOfStock = []
+
+//   docs.forEach(doc => {
+    
+//     const { inStock } = doc.data()
+//     const itemInCart = items.find(item => item.slug === doc.id)
+//     if (itemInCart.quantity >= inStock) {
+//       batch.update(doc.ref, { inStock: inStock - itemInCart.quantity })
+//     } else {
+//       outOfStock.push(itemInCart)
+//     }
+
+//   });
+
+//   if(outOfStock.length > 0) return outOfStock
+
+//   const order = {
+//     client: values,
+//     items: items.map(item => ({
+//       title: item.title,
+//       price: item.price,
+//       quantity: item.quantity,
+//       slug: item.slug
+//     })),
+//     date: new Date().toISOString(),
+//   }
+
+//   const docId = Timestamp.fromDate(new Date()).toMillis()
+//   const orderRef = doc(db, "orders", String(docId))
+//   await batch.commit()
+//   await setDoc(orderRef, order)
+
+//   return docId
+  
+// }
 
 const createProduct = async (values, file) => {
 
@@ -16,6 +61,7 @@ const createProduct = async (values, file) => {
   const fileURL = await getDownloadURL( fileSnapshot.ref )
 
   const docRef = doc(db, "products", values.slug)
+  
   return setDoc(docRef, {
       ...values,
       img: fileURL
@@ -24,7 +70,6 @@ const createProduct = async (values, file) => {
 
 const CreateForm = () => {
 
-  // const [valueBanner, setvalueBanner] = useState(false);
   const [file, setFile] = useState(null)
   const [values, setValues] = useState({
     slug: '',
@@ -35,12 +80,6 @@ const CreateForm = () => {
     description: '',
     banner: false,
     dataBanner: {}
-    // dataBanner: {
-    //   color: '',
-    //   typeBanner: '',
-    //   titleBanner: '',
-    //   descriptionBanner: ''
-    // },
   })
 
 
@@ -53,7 +92,6 @@ const CreateForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('this values and file', {values, file})
     await createProduct(values, file)
   }
 
@@ -153,7 +191,7 @@ const CreateForm = () => {
               <div class="mt-2">
                 <input 
                   type="file" 
-                  // accept="image/*" 
+                  accept="image/*" 
                   allowMultiple={false}
                   required 
                   className='block w-full border p-2 my-2' 
@@ -161,77 +199,6 @@ const CreateForm = () => {
                 />               
               </div>
             </div>
-
-
-
-            {/* <div className="sm:col-span-4">
-              <label htmlFor={"banner"} className="block text-sm font-medium leading-6 text-gray-900">
-                banner
-              </label>
-              <input 
-                type="checkbox" 
-                name="active" 
-                onChange={handleChange}
-                value={valueBanner} />
-            </div> */}
-            {/* { valueBanner && <>
-            
-              <div class="sm:col-span-3">
-              <label for="dataBanner.color" class="block text-sm font-medium leading-6 text-gray-900">Color</label>
-              <div class="mt-2">
-                <input 
-                    type='text'
-                    value={values.dataBanner.color}
-                    required 
-                    className='block w-full border p-2 my-2' 
-                    name='dataBanner.color' 
-                    onChange={handleChange} 
-                />              
-              </div>
-            </div>
-
-            <div class="sm:col-span-3">
-              <label for="dataBanner.titleBanner" class="block text-sm font-medium leading-6 text-gray-900">Title</label>
-              <div class="mt-2">
-                <input 
-                    type='text'
-                    value={values.dataBanner.titleBanner}
-                    required 
-                    className='block w-full border p-2 my-2' 
-                    name='dataBanner.titleBanner' 
-                    onChange={handleChange} 
-                />              
-              </div>
-            </div>
-            <div class="sm:col-span-3">
-              <label for="dataBanner.typeBanner" class="block text-sm font-medium leading-6 text-gray-900">Type</label>
-              <div class="mt-2">
-                <input 
-                    type='number'
-                    value={values.dataBanner.typeBanner}
-                    required 
-                    className='block w-full border p-2 my-2' 
-                    name='dataBanner.typeBanner' 
-                    onChange={handleChange} 
-                />              
-              </div>
-            </div>
-
-            <div class="sm:col-span-3">
-              <label for="dataBanner.descriptionBanner" class="block text-sm font-medium leading-6 text-gray-900">Description</label>
-              <div class="mt-2">
-                <input 
-                    type='number'
-                    value={values.dataBanner.descriptionBanner}
-                    required 
-                    className='block w-full border p-2 my-2' 
-                    name='dataBanner.descriptionBanner' 
-                    onChange={handleChange} 
-                />              
-              </div>
-            </div>
-            </>
-            } */}
           </div>
         </div>
       </div>

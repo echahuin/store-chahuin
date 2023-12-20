@@ -8,8 +8,6 @@ const ProductList = async({category}) => {
 
   const dataResponse = await getProductCategory(category)
 
-  console.log(dataResponse)
-
   return (
     <div className={styles.contCards}>
       {

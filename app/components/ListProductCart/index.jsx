@@ -8,7 +8,6 @@ import Link from 'next/link'
 const ListProductCart = () => {
 
     const {cart, removeFromCart } = useCartContext()
-    console.log(cart)
 
     const totalPrice = cart.reduce((acc, item)=>{
         const totalPrice = item.quantity * item.price
@@ -37,7 +36,7 @@ const ListProductCart = () => {
                 Total a Pagar: {totalPrice}$
             </span>
             <div className='pt-5'>
-                <Link href='/PaymentPage'>
+                <Link href='/LoginOrRegister'>
                     <ButtonSmall disabled={!(cart.length > 0)} text="Pagar" />      
                 </Link>
             </div>

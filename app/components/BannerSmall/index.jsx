@@ -20,7 +20,7 @@ import ButtonSmall from '../UI/ButtonSmall';
 
 function BannerSmall({data}) {
 
-  console.log(data)
+  // console.log(data)
   const { category } = data
   const {image, color, titleBanner} = data.dataBanner
 

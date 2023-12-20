@@ -1,6 +1,6 @@
 .button {
-    border-radius: 0px;
-    background-color: rgb(235, 38, 38);
+    border-radius: 1000px;
+    background-color: rgb(38, 100, 235);
     color: rgb(255, 255, 255);
     padding: 1rem 1.5rem;
     cursor: pointer;
@@ -16,13 +16,17 @@
 
 @media only screen and (max-width: 56.25rem){
     .button {
-        padding: .5rem 1rem;
+        border-radius: 0px;
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        color: rgb(18, 45, 199);
+        padding: .2rem .5rem;
         font-size: .8rem;
     }
 }
 @media only screen and (max-width: 37.5rem){
     .button {
-        padding: .7rem 1.2rem;
+        // padding: .5rem .9rem;
         font-size: .9rem;
     }
     

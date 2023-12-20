@@ -24,6 +24,7 @@ const ControllerProduct = ({ data}) => {
             ...product,
             quantity: count
         })
+        setCount(0)
     }
 
   return (

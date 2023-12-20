@@ -1,0 +1,34 @@
+.contLoginOrOrder{
+    // text-align: ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%
+}
+.contLoginGoogle {
+    width: 100%;
+    padding-top: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginGoogle{
+    width: 20rem;
+    background: rgba(184, 184, 184, 0.247);
+    padding: .7rem 1.2rem;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginGoogle p{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0;
+    color: #000;
+}

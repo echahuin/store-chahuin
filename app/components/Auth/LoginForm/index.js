@@ -22,7 +22,6 @@ const LoginForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         loginUser(values);
-        console.log(values);
     }
 
   return (

@@ -42,7 +42,7 @@ import ButtonSmall from '../UI/ButtonSmall';
 //   ]
     
 const Banner = async({products}) => {
-    console.log('this products', products.data)
+    // console.log('this products', products.data)
     const { category } = products.data[0]
     const { image, color, titleBanner, descriptionBanner } = products.data[0].dataBanner
     
