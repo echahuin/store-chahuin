@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import { CartProvider } from './context/CartContext'
 import { AuthProvider } from './context/AuthContext'
 import { PaymentProvider } from './context/PaymentContext'
+import { ProductDataProvider } from './context/ProductDataContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,10 +20,12 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           <CartProvider>
           <PaymentProvider>
+          <ProductDataProvider>
             <Nav />
             <main>
               {children}
             </main>
+            </ProductDataProvider>
           </PaymentProvider>
           </CartProvider>
         </AuthProvider>

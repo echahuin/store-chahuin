@@ -1,3 +1,13 @@
+
+.contDetail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+}
+
+
 .contFilters {
     width: 25rem;
     display: flex;
@@ -48,8 +58,20 @@
     padding: 2rem 0rem;
   }
 
+.form {
+  text-align: center;
+  width: 100%;
+}
+.button {
+  padding: 0rem 4rem;
+}
 
-  @media only screen and (max-width: 56.25rem){
+@media only screen and (max-width: 56.25rem){
+    .contDetail {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .contFilters{
       padding: 1rem;
       padding-top: 7rem;

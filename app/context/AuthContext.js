@@ -7,7 +7,6 @@ import { createUserWithEmailAndPassword,
          signOut,
          updateProfile,
          signInWithPopup,
-         OperationType,
          } from "firebase/auth"
 import { doc, getDoc } from "firebase/firestore";
 import { db, storage } from "@/firebase/config"
@@ -64,7 +63,7 @@ import addUserDb from "@/app/utils/addUserDb"
         }
         
         const loginGoogle = async () => {
-            // try {
+        
                 await signInWithPopup(auth, googleAuthProvider).then((result) => {
                 console.log('result', result)
                 if(result?.operationType === 'signIn'){
@@ -76,14 +75,10 @@ import addUserDb from "@/app/utils/addUserDb"
                        displayName: result.user.providerData[0].displayName,
                        photoURL: result.user.providerData[0].photoURL,
                        phoneNumber: result.user.providerData[0].phoneNumber,
-                       rol: "client"
+                       rol: "admin"
                     })
                 }
                 })
-            //     return { ok: true , error:  null }
-            // } catch (error) {
-            //     return { ok: false , error:  error }
-            // }
         }
 
         useEffect(() => {

@@ -58,12 +58,19 @@
 }
 
 .contUser {
+    border-radius: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin: 0rem 3rem;
     margin-left: 0rem;
+}
+.contUser img {
+    // width: 3rem;
+    // height: 3rem;
+    border-radius: 50%;
+    // margin-bottom: .5rem;
 }
 .contLinkAdmin{
     font-size: 1.2rem;

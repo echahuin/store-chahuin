@@ -15,7 +15,6 @@ export const PaymentProvider = ({ children }) => {
     });
 
     const addToPayment = (product) => {
-    // console.log('product', product)
         setPayment({
             name: product.name,
             numberCard: product.numberCard,
