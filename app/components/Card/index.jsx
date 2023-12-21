@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 function Card({ data }) {
   // console.log(data)
-  const {slug, name, title, description, price, img, inStock } = data;
+  const {slug, name, title, description, price, img, stock } = data;
 
   const truncatedDescription =
     description && description.length > 30
@@ -29,7 +29,7 @@ function Card({ data }) {
           <h1>{title}</h1>
           <p>{truncatedDescription}</p>
           <div className={styles.footerData}>
-            <span>Stock: {inStock}</span>
+            <span className={``} >Stock: {stock}</span>
             <h3>{price}$</h3>
           </div>
         </div>

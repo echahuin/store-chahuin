@@ -11,10 +11,10 @@ const ProductTableAdmin = async() => {
 
     return (
     <>
-        <div className={style.controlHeadTables} >
+        {/* <div className={style.controlHeadTables} >
             <h1>Products</h1>
             <Link href={'/admin/create'}><ButtonSmall text={"add Product"}/></Link>
-        </div>
+        </div> */}
     <div className={style.contTable}>
         <div className={style.tables}>
          <table>

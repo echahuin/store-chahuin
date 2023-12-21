@@ -1,58 +1,10 @@
 "use client"
 import React, {useState} from 'react'
 import ButtonSmall from '@/app/components/UI/ButtonSmall'
-import styles from './styles.module.scss'
-// import { Switch } from "@tailwindcss/forms";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { CATEGORIES } from '@/app/const/optionsCategory'
-import { doc, getDoc, setDoc, writeBatch } from "firebase/firestore";
+import { doc,  setDoc,  } from "firebase/firestore";
 import { db, storage } from '@/firebase/config'
-
-
-// const createOrder = async (values, items) => {
-
-//   const docsPromises = items.map((slug) => {
-//     const docRef = doc(db, "products", slug)
-//     return getDoc(docRef)
-//   })
-
-//   const docs = await Promise.all(docsPromises)
-//   const batch = writeBatch(db)
-//   const outOfStock = []
-
-//   docs.forEach(doc => {
-    
-//     const { inStock } = doc.data()
-//     const itemInCart = items.find(item => item.slug === doc.id)
-//     if (itemInCart.quantity >= inStock) {
-//       batch.update(doc.ref, { inStock: inStock - itemInCart.quantity })
-//     } else {
-//       outOfStock.push(itemInCart)
-//     }
-
-//   });
-
-//   if(outOfStock.length > 0) return outOfStock
-
-//   const order = {
-//     client: values,
-//     items: items.map(item => ({
-//       title: item.title,
-//       price: item.price,
-//       quantity: item.quantity,
-//       slug: item.slug
-//     })),
-//     date: new Date().toISOString(),
-//   }
-
-//   const docId = Timestamp.fromDate(new Date()).toMillis()
-//   const orderRef = doc(db, "orders", String(docId))
-//   await batch.commit()
-//   await setDoc(orderRef, order)
-
-//   return docId
-  
-// }
 
 const createProduct = async (values, file) => {
 

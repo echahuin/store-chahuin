@@ -12,17 +12,21 @@ function Nav() {
 
     const { cart } = useCartContext()
     const { user } = useAuthContext()
+    
+    console.log(user)
 
   return (
     <div className={styles.contNav}>
         <Link href={'/'}>
             <div className={`${styles.contLogo} w-16 md:w-24 lg:w-32`} >
+               
                 <Image
-                    src="/logoBlack.png"
+                    src={"/logoBlack.png"}
                     width={90}
                     height={90}
                     alt="img logo"
                 />
+                
             </div>
         </Link>
         <div className={styles.contTools} >
@@ -38,12 +42,19 @@ function Nav() {
                     <ButtonLogout text={'Salir'}/>
                 </div>
                 <div className={`${styles.contUser} w-7 md:w-24 lg:w-32`}>
-                    <Image
-                        src="/user.png"
-                        width={45}
-                        height={45}
-                        alt="img logo"
-                        />
+                { user.photoURL?
+                        <Image
+                            src={user.photoURL}
+                            width={45}
+                            height={45}
+                            alt="img logo"
+                        />:
+                        <Image
+                            src="/user.png"
+                            width={45}
+                            height={45}
+                            alt="img logo"
+                        />}
                     <span>{user.displayName}</span>
                 </div>
                 </div>

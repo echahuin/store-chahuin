@@ -10,17 +10,8 @@ export async  function POST( req ){
         email, 
         password, 
         photoURL,  
-        phoneNumber, 
-        uid
+        phoneNumber,
     } = await req.json()
-    console.log({ displayName, 
-        email, 
-        password, 
-        photoURL,  
-        phoneNumber, 
-        uid
-    })
-
     try {
 
         const docRef = doc(db, "users", email);
@@ -31,6 +22,7 @@ export async  function POST( req ){
             return NextResponse.json({data: 'user already exists'}, {status: 500});
 
         } else {
+        console.log('Create users')
             const usersRef = doc(db, 'users', email);
             setDoc(usersRef, {
                 name: displayName,
@@ -39,8 +31,7 @@ export async  function POST( req ){
                 password: password,
                 photoURL: photoURL,
                 phoneNumber: phoneNumber,
-                rol: "admin",
-                uid: uid
+                rol: "client"
              }).then(() => console.log("create users"));
         }
         return NextResponse.json({data: 'get data ok'}, {status: 200});

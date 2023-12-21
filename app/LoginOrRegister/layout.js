@@ -4,9 +4,9 @@ import { useAuthContext } from "@context/AuthContext"
 const LoginOrRegisterLayout = ({ children, payment }) => {
     
     const {user} = useAuthContext()
-    console.log('user', user)
+    console.log(user)
 
-    if(user.logged && payment){
+    if(user.logged && payment ){
         return <> {payment} </>
     }
 

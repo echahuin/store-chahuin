@@ -1,15 +1,28 @@
 "use client"
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import ButtonSmall from '../UI/ButtonSmall';
+import { usePaymentContext } from '@/app/context/PaymentContext';
+import { useRouter } from 'next/navigation'
 
 
-//este tiene que ser un formulario de payment no de register
+const FormPayment = () => {
 
-const Form = ({ onSubmit }) => {
+  const {payment, addToPayment } = usePaymentContext()
+  const router = useRouter()
+
+  useEffect(() => {
+    if(payment.name !== ''){
+      setValues(payment)
+      router.push('/order')
+    }
+  }, [payment, router]);
+
   const [values, setValues] = useState({
     name: '',
-    email: '',
-    password: '',
+    numberCard: '',
+    month: '',
+    year:'',
+    cvv: ''
   });
 
   const handleChange = (e) => {
@@ -22,7 +35,8 @@ const Form = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(values);
+    addToPayment(values);
+    payment.name !== '' && router.push('/order')
   };
 
   return (
@@ -85,7 +99,7 @@ const Form = ({ onSubmit }) => {
             </div>
 
             <div class="sm:col-span-2">
-              <label for="postal-code" class="block text-sm font-medium leading-6 text-gray-900">CVV</label>
+              <label for="cvv" class="block text-sm font-medium leading-6 text-gray-900">CVV</label>
               <div class="mt-2">
                 <input 
                   onChange={handleChange} 
@@ -99,9 +113,11 @@ const Form = ({ onSubmit }) => {
           </div>
         </div>
       </div>
-      <ButtonSmall type="submit" text="Comprar" />
+      {/* <Link href={'/order'}> */}
+        <ButtonSmall type="submit" text="Comprar" />
+      {/* </Link> */}
     </form>
   );
 };
 
-export default Form;
+export default FormPayment;

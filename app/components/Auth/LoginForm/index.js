@@ -27,7 +27,7 @@ const LoginForm = () => {
   return (
     <div className={styles.contLoginForm}>
         <form className="bg-gradient(from-red to-blue)" onSubmit={handleSubmit}>
-            <div className="pt-40">
+            <div className="">
                 <div className="border-b border-gray-900/10 pb-8 pt-11">
                     <h2 className="text-center font-semibold leading-7 text-gray-900 pb-5">Login</h2>
                     <div className="mt-19 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -53,7 +53,7 @@ const LoginForm = () => {
     								<input 
     									onChange={handleChange}
     									value={values.password}
-    									type="text" 
+    									type="password" 
     									name="password" 
     									id="password"
     									required
@@ -67,7 +67,6 @@ const LoginForm = () => {
             </div>
 		    	<div  className={styles.contButton}>
 		    		<ButtonSmall  type="submit" text="Login" />
-                    {/* <ButtonSmall  onClick={()=>registerUser(values)} text="Login" /> */}
 		    	</div>
         </form>
     </div>

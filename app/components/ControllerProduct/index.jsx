@@ -12,7 +12,7 @@ const ControllerProduct = ({ data}) => {
     const [product] = useState(data);
 
     const incrementCount = () => {
-        setCount(count + 1);
+       if(data.stock !== count) setCount(count + 1);
     };
 
     const decrementCount = () => {
