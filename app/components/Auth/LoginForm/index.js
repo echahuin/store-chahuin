@@ -6,7 +6,7 @@ import { useAuthContext } from '@/app/context/AuthContext'
 
 const LoginForm = () => {
 
-    const { registerUser, loginUser } = useAuthContext()
+    const { loginUser } = useAuthContext()
     const [values, setValues] = useState({
         email: '',
         password: '',

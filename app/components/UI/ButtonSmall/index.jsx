@@ -2,7 +2,7 @@
 import React from 'react';
 import style from './buttonSmall.module.scss';
 
-const ButtonSmall = ({ type, onClick, text, disabled=false }) => {
+const ButtonSmall = ({ type='', onClick, text, disabled=false }) => {
   
   const styleDisableButton = {
     backgroundColor: "#ccc",
@@ -12,7 +12,7 @@ const ButtonSmall = ({ type, onClick, text, disabled=false }) => {
   };
 
   return (
-    <button type className={style.button} style={
+    <button type={type} className={style.button} style={
       disabled ? styleDisableButton : {}
     } onClick={onClick}>
       {text}

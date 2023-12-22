@@ -12,17 +12,16 @@ const getOrders = async () => {
 }
 
 const Orders = async () => {
+
     const orders = await getOrders()
     
     return (
-    <div className="flex justify-center align-items-center" >
-        <h1>Orders</h1>
+        <div className="flex justify-center align-items-center" >
         <ul>
             {orders.map((order, index)=>{
                     return (
-                        <li key={index}>
-                            <p>Comprador: {order.client.nombre}</p>
-                            <p>Fecha: {new Date(`${order.client.dat}`)}</p>
+                        <li className="m-3" key={index}>
+                        <p>{index+1}.-Comprador: {order.client.displayName} - Fecha: {new Date(order.date).toLocaleDateString()}</p>
                         </li>
                     )    
             })}
