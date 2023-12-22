@@ -3,7 +3,7 @@ import { useAuthContext } from "@context/AuthContext"
 import styles from './adminStyle.module.scss'
 import Link from 'next/link'
 
-const AdminLayout = ({ children, login }) => {
+const AdminLayout = ({ children }) => {
     
     const {user} = useAuthContext()
 
@@ -14,7 +14,7 @@ const AdminLayout = ({ children, login }) => {
             <Link className="hover:text-blue-500" href={'/admin/create'}>Add Product</Link>
             <Link className="hover:text-blue-500" href={'/admin/orders'}>orders</Link>
         </div>}
-        { user.logged && (user.rol === "admin") ? children : login}
+        { user.logged && (user.rol === "admin") ? children : <>hi</>}
     
     </div>
 
