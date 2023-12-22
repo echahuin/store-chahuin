@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     padding-top: 0rem;
     background-color: #ffffff;
 }
@@ -61,7 +61,7 @@
 @media only screen and (max-width: 64rem){
     .contTable{
         align-items: flex-start;
-        overflow: scroll;
+        overflow-y: none;
     }
     .contTable table{
         width: 100%;

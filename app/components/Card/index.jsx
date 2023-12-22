@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 function Card({ data }) {
-  // console.log(data)
+
   const {slug, name, title, description, price, img, stock } = data;
 
   const truncatedDescription =

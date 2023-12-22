@@ -1,20 +1,14 @@
 import React from 'react'
 import style from './style.module.scss'
-import ButtonLogout from '@/app/components/UI/ButtonLogout'
-import ButtonSmall from '@/app/components/UI/ButtonSmall'
 import Link from 'next/link'
 import Image from 'next/image'
 
 const ProductTableAdmin = async() => {
 
-    const items = await fetch('http://localhost:3000/api/products/all').then(res => res.json()) 
+    const items = await fetch('http://localhost:3000/api/products/all', {cache: 'no-store' }).then(res => res.json()) 
 
     return (
     <>
-        {/* <div className={style.controlHeadTables} >
-            <h1>Products</h1>
-            <Link href={'/admin/create'}><ButtonSmall text={"add Product"}/></Link>
-        </div> */}
     <div className={style.contTable}>
         <div className={style.tables}>
          <table>
@@ -43,8 +37,8 @@ const ProductTableAdmin = async() => {
                     <td>{item.slug}</td>
                     <td>{item.stock}</td>
                     <td>{item.title}</td>
-                    <td className='cursor-pointer' ><Link href={'/admin/edit'} className="text-blue-500">Edit...</Link></td>
-                    <td className='cursor-pointer' ><Link href={'/admin/edit'} className="text-red-500">Delete...</Link></td>
+                    { item.dataBanner.typeBanner ? <td><span className='text-gray-300'>disable</span></td> : <td className='cursor-pointer' ><Link href={`/admin/edit/${item.slug}`} className="text-blue-500">Edit...</Link></td> } 
+                    { item.dataBanner.typeBanner ? <td><span className='text-gray-300'>disable</span></td> : <td className='cursor-pointer' ><Link href={`/admin/delete/${item.slug}`} className='text-red-300' >Delete...</Link></td>}
                     </tr>
                 )
               })}

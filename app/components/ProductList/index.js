@@ -6,15 +6,7 @@ import { useProductDataContext } from '@/app/context/ProductDataContext'
 
 const ProductList = () => {
 
-
-// console.log('this', props)
   const { filterData } = useProductDataContext()
-
-  // useEffect(() => {
-  //   getProducts(productsData)
-  // }, [productsData, getProducts]);
-
-  // console.log('important Products', products)
 
   return (
     <div className={styles.contCards}>

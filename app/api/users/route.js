@@ -22,7 +22,6 @@ export async  function POST( req ){
             return NextResponse.json({data: 'user already exists'}, {status: 500});
 
         } else {
-        console.log('Create users')
             const usersRef = doc(db, 'users', email);
             setDoc(usersRef, {
                 name: displayName,

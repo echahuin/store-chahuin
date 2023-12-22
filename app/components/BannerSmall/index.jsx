@@ -4,23 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ButtonSmall from '../UI/ButtonSmall';
 
-// img: '/products/busoDama/1.jpg',
-// title: 'Where does it come from?',
-// price: 2500,
-// category: 'buso dama',
-// banner: true,
-// stock: 12,
-// dataBanner: {
-//   descriptionBanner: '',
-//   typeBanner: 'small-1',
-//   image: '/products/busoDama/1.jpg',
-//   color: '#D6D490',
-//   titleBanner: 'Cierre de temporada en busos'
-// }
 
 function BannerSmall({data}) {
-
-  // console.log(data)
   const { category } = data
   const {image, color, titleBanner} = data.dataBanner
 

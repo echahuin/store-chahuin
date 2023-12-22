@@ -1,14 +1,12 @@
 "use client"
 import React, {useState, useEffect} from 'react';
 import styles from './filters.module.scss';
-// import Image from 'next/image'
 import { useProductDataContext } from '@/app/context/ProductDataContext'
 import ButtonSmall from '@/app/components/UI/ButtonSmall'
 
 const Filters = ({productsData, children}) => {
-// console.log(children)
 const [searchData, setSearchData] = useState('all');
-const { products, filterData, handleFilterData, setProducts } = useProductDataContext()
+const { handleFilterData, setProducts } = useProductDataContext()
 const [values, setValues] = useState({});
 
 useEffect(() => {
@@ -18,7 +16,6 @@ useEffect(() => {
     setSearchData('')
   }
 }, [productsData, searchData, setProducts]);
-// }, []);
 
 
   const handleChange = ( e ) => {
@@ -31,8 +28,6 @@ useEffect(() => {
   const handleSubmit = (e) => {
     e.preventDefault()
     handleFilterData(values)
-    // const childrenUpdate = React.cloneElement(children, { products })}
-    console.log(products)
   }
   
   
@@ -60,7 +55,6 @@ useEffect(() => {
             className={styles.inputStyle} 
             placeholder="Buscar" 
             />
-            {/* <Image src="/searchIcon.svg" width={30} alt='search img' height={3} className={styles.searchIcon} /> */}
         </div>
         <div className={styles.button} >
           <ButtonSmall type="submit" text="filtrar" />

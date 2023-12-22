@@ -12,8 +12,6 @@ function Nav() {
 
     const { cart } = useCartContext()
     const { user } = useAuthContext()
-    
-    console.log(user)
 
   return (
     <div className={styles.contNav}>

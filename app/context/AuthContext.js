@@ -31,8 +31,6 @@ import addUserDb from "@/app/utils/addUserDb"
         })
         
         const registerUser = async (value, file) => {
-        
-        console.log(file)
             try {
             
                 const storageRef = ref(storage, value.email)
@@ -41,10 +39,12 @@ import addUserDb from "@/app/utils/addUserDb"
                 
                 await createUserWithEmailAndPassword(auth, value.email, value.password)
                 await updateProfile(auth.currentUser, { 
-                    displayName: value.displayName, 
+                    displayName: value.displayName,
+                    rol: 'client',
                     photoURL: fileURL,
                     phoneNumber: parseInt(value.phoneNumber)}).then(() => {})
                 await addUserDb({...value, photoURL: fileURL})
+
                 return { ok: true , error:  null }
               
               } catch (error) {
@@ -54,7 +54,6 @@ import addUserDb from "@/app/utils/addUserDb"
         }
         
         const loginUser = async (values) => {
-            console.log(values)
            await signInWithEmailAndPassword(auth, values.email, values.password)
         }
 
@@ -64,26 +63,24 @@ import addUserDb from "@/app/utils/addUserDb"
         
         const loginGoogle = async () => {
         
-                await signInWithPopup(auth, googleAuthProvider).then((result) => {
-                console.log('result', result)
+            await signInWithPopup(auth, googleAuthProvider).then((result) => {
                 if(result?.operationType === 'signIn'){
-                console.log(result.user.providerData[0])
                     setUser({
-                       logged: true,
-                       email: result.user.providerData[0].email,
-                       uid: result.user.providerData[0].uid,
-                       displayName: result.user.providerData[0].displayName,
-                       photoURL: result.user.providerData[0].photoURL,
-                       phoneNumber: result.user.providerData[0].phoneNumber,
-                       rol: "admin"
+                        logged: true,
+                        email: result.user.providerData[0].email,
+                        uid: result.user.providerData[0].uid,
+                        displayName: result.user.providerData[0].displayName,
+                        photoURL: result.user.providerData[0].photoURL,
+                        phoneNumber: result.user.providerData[0].phoneNumber,
+                        rol: "client"
                     })
                 }
                 })
+
         }
 
         useEffect(() => {
-         console.log(user)
-            onAuthStateChanged(auth, async (user) => {
+            onAuthStateChanged(auth, async (user) => {                
                 if (user) {
                     const docRef = doc(db, "users", user.email);
                     const userDoc = await getDoc(docRef);
@@ -93,9 +90,9 @@ import addUserDb from "@/app/utils/addUserDb"
                             logged: true,
                             email: user.email,
                             uid: user.uid,
-                            displayName: userDoc.data()?.displayName,
-                            photoURL: userDoc.data()?.photoURL,
-                            phoneNumber: userDoc.data()?.phoneNumber,
+                            displayName: user.displayName,
+                            photoURL:user.photoURL,
+                            phoneNumber: user?.phoneNumber,
                             rol: userDoc.data()?.rol
                         })
                     }
@@ -110,6 +107,18 @@ import addUserDb from "@/app/utils/addUserDb"
                             rol: null
                         })
                     }
+                
+                // if (user) {
+                //         setUser({
+                //             logged: true,
+                //             email: user.email,
+                //             uid: user.uid,
+                //             displayName: user.displayName,
+                //             photoURL: user.photoURL,
+                //             phoneNumber: user.phoneNumber,
+                //             rol: user.rol
+                //         })
+                //     }
             })
         }, []);
    

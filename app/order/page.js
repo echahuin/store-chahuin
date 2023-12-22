@@ -17,8 +17,6 @@ const OrderPage = () => {
     const { cart, clearCart } = useCartContext()
     const { user } = useAuthContext()
     
-    console.log(payment)
-    
     useEffect(() => {
         if(payment.name === ''){
             router.push('/')
@@ -40,8 +38,6 @@ const OrderPage = () => {
         
         const { stock } = doc.data()
         const itemInCart = items.find(item => item.slug === doc.id)
-        console.log(stock, itemInCart.quantity)
-        console.log('this items', stock - itemInCart.quantity)
         if (itemInCart.quantity > stock) {
           outOfStock.push(itemInCart)
         } else {

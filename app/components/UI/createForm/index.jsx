@@ -5,7 +5,10 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { CATEGORIES } from '@/app/const/optionsCategory'
 import { doc,  setDoc,  } from "firebase/firestore";
 import { db, storage } from '@/firebase/config'
+import { useRouter } from 'next/navigation';
 
+
+// mover a utils
 const createProduct = async (values, file) => {
 
   const storageRef = ref(storage, values.slug)
@@ -17,19 +20,21 @@ const createProduct = async (values, file) => {
   return setDoc(docRef, {
       ...values,
       img: fileURL
-  }).then(() => console.log("Producto creado exitosamente"))
+  })
 }
 
-const CreateForm = () => {
+const CreateForm = ({data}) => {
+
+const router = useRouter()
 
   const [file, setFile] = useState(null)
   const [values, setValues] = useState({
-    slug: '',
-    title: '',
-    price: 0,
-    stock: 0,
-    category: '',
-    description: '',
+    slug: data?.slug ? data?.slug : '',
+    title: data?.title ? data?.title : '',
+    price: data?.price ? data?.price : 0,
+    stock: data?.stock ? data?.stock : 0,
+    category: data?.category ? data?.category : '',
+    description: data?.description ? data?.description : '',
     banner: false,
     dataBanner: {}
   })
@@ -44,7 +49,8 @@ const CreateForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await createProduct(values, file)
+    await createProduct(values, file).then(() => router.push('/admin'))
+
   }
 
   return (
@@ -152,22 +158,8 @@ const CreateForm = () => {
       </div>
     </div>
   </div>
-  <ButtonSmall type="submit" text="Comprar" />
+  <ButtonSmall type="submit" text="Create" />
 </form>
-
-    // <form onSubmit={handleSubmit}>
-    //   <div className="pt-50">
-    //     <div className="border-b border-gray-900/10 pb-8 pt-11">
-    //       <h2 class="text-center font-semibold leading-7 text-gray-900 pb-5">Form add product</h2>
-    //       <div class="mt-19 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-
-    //        
-    //         
-    //       </div>
-    //     </div>
-    //   </div>
-    //   <ButtonSmall type="submit" text="Add product" />
-    // </form>
   )
 }
 

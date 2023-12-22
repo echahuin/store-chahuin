@@ -6,7 +6,6 @@ import Link from 'next/link'
 const AdminLayout = ({ children, login }) => {
     
     const {user} = useAuthContext()
-    console.log(user)
 
     return <div className={styles.contPanelAdmin}>
         {user.logged && (user.rol === "admin") && 

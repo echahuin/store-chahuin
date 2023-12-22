@@ -17,7 +17,7 @@ export const ProductDataProvider = ({ children }) => {
     }
     const handleFilterData = (value) => {
        
-        setFilterData(products.filter((item) => item.price >= value?.priceMax));
+        setFilterData(products.filter((item) => item.price <= value?.priceMax));
    
     }
     const clearProducts = () => {
