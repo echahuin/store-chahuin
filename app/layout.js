@@ -22,9 +22,9 @@ export default function RootLayout({ children }) {
           <PaymentProvider>
           <ProductDataProvider>
             <Nav />
-            <main>
+            <div>
               {children}
-            </main>
+            </div>
             </ProductDataProvider>
           </PaymentProvider>
           </CartProvider>

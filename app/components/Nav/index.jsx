@@ -17,14 +17,12 @@ function Nav() {
     <div className={styles.contNav}>
         <Link href={'/'}>
             <div className={`${styles.contLogo} w-16 md:w-24 lg:w-32`} >
-               
                 <Image
                     src={"/logoBlack.png"}
                     width={90}
                     height={90}
                     alt="img logo"
                 />
-                
             </div>
         </Link>
         <div className={styles.contTools} >

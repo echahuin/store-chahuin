@@ -16,17 +16,15 @@ const Orders = async () => {
     const orders = await getOrders()
     
     return (
-        <div className="flex justify-center align-items-center" >
-        <ul>
-            {orders.map((order, index)=>{
-                    return (
-                        <li className="m-3" key={index}>
-                        <p>{index+1}.-Comprador: {order.client.displayName} - Fecha: {new Date(order.date).toLocaleDateString()}</p>
-                        </li>
-                    )    
-            })}
+        <div className="pt-5 container mx-auto flex justify-center items-center sm:flex-col">
+        <ul className="list-disc space-y-4">
+          {orders.map((order, index) => (
+            <li className="p-1" key={index}>
+              <p>{index + 1}.-Comprador: {order.client.displayName} - Fecha: {new Date(order.date).toLocaleDateString()}</p>
+            </li>
+          ))}
         </ul>
-    </div>
+      </div>
     )
 }
 

@@ -7,7 +7,7 @@ export async  function POST( req ){
 
     
     const { displayName, 
-        email, 
+        email,
         password, 
         photoURL,  
         phoneNumber,
