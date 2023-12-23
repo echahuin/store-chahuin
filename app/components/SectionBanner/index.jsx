@@ -5,9 +5,9 @@ import styles from './sectionBanner.module.scss';
 const SectionBanner = async({products}) => {
 
   return (
-        <section className={styles.contSectionBanner}>
-          {products.data.map((product, index) => <BannerSmall key={index} data={product} />)}
-        </section>
+        <div className={styles.contSectionBanner}>
+          {products && products.data.map((product, index) => <BannerSmall key={index} data={product} />)}
+        </div>
     )
 }
 
