@@ -3,7 +3,7 @@
 const deleteProduct = async (value) => {
 console.log(value)
 
-    const response = await fetch('http://localhost:3000/api/products/delete', {
+    const response = await fetch(`http://${process.env.VERCEL_URL}/api/products/delete`, {
         method: 'DELETE',
         body: JSON.stringify(value),
         headers: {

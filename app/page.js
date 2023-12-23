@@ -66,7 +66,7 @@ const getDataBanner = async (typeBanner) => {
   try {
     // const url =   || 'localhost:3000'
 
-    const response = await fetch(`https://store-chahuin.vercel.app/api/typeBanners/${typeBanner}`, {
+    const response = await fetch(`http://${process.env.VERCEL_URL}/api/typeBanners/${typeBanner}`, {
       cache: "no-store",
     });
 
