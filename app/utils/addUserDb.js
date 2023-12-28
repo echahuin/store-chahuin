@@ -2,7 +2,7 @@
 
 const addUserDb = async (value) => {
 
-      const response = await fetch(`http://${process.env.VERCEL_URL}/api/users`, {
+      const response = await fetch(`${process.env.VERCEL_URL}/api/users`, {
         method: "POST",
         body: JSON.stringify(value),
         headers: {
