@@ -14,9 +14,7 @@
 
 const getDataBanner = async (typeBanner) => {
   try {
-    const url = process.env.VERCEL_URL || 'localhost:3000'
-
-    const response = await fetch(`https://${url}/api/typeBanners/${typeBanner}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/typeBanners/${typeBanner}`, {
       cache: "no-store",
     });
 

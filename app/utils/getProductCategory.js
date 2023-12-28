@@ -1,7 +1,7 @@
 
 const getProductCategory = async (category) => {
 
-    const response = await fetch(`${process.env.VERCEL_URL}/api/products/${category}`, {cache: "no-store"});
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/products/${category}`, {cache: "no-store"});
     if (!response.ok) {
         console.error(`Failed to fetch data: ${response.status}`);
         return [];

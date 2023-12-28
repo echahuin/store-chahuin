@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const ProductTableAdmin = async() => {
 
-    const items = await fetch(`${process.env.VERCEL_URL}/api/products/all`, {cache: 'no-store' }).then(res => res.json()) 
+    const items = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/products/all`, {cache: 'no-store' }).then(res => res.json()) 
 
     return (
     <>

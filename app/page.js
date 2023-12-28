@@ -64,11 +64,8 @@ import { Suspense } from 'react';
 // }
 const getDataBanner = async (typeBanner) => {
   try {
-    // const url =   || 'localhost:3000'
-    const VERCEL_URL = process.env.VERCEL_URL;
-console.log('VERCEL_URL', VERCEL_URL)
 
-    const response = await fetch(`${process.env.VERCEL_URL}/api/typeBanners/${typeBanner}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/typeBanners/${typeBanner}`, {
       cache: "no-store",
     });
 
