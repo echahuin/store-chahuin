@@ -6,6 +6,7 @@ import { Suspense } from 'react';
 const getDataBanner = async (typeBanner) => {
 
   try {
+  
     const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/typeBanners/${typeBanner}`, {
       method: "GET",
       // body: JSON.stringify(value),
