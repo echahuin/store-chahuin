@@ -1,14 +1,12 @@
 import Banner from './components/Banner';
 import PrincipalBanner from './components/PrincipalBanner';
 import Footer from './components/UI/Footer';
-// import SectionBanner from './components/SectionBanner';
 import { Suspense } from 'react';
 
 const getDataBanner = async (typeBanner) => {
+
   try {
-
     const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/typeBanners/${typeBanner}`);
-
     if (!response.ok) {
       throw new Error(`Failed to fetch data: ${response.status}`);
     }
