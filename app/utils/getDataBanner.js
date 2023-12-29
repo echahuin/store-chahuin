@@ -15,7 +15,12 @@
 const getDataBanner = async (typeBanner) => {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/typeBanners/${typeBanner}`, {
-      cache: "no-store",
+      method: "GET",
+      // body: JSON.stringify(value),
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+      },
     });
 
     if (!response.ok) {

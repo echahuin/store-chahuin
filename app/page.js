@@ -6,7 +6,14 @@ import { Suspense } from 'react';
 const getDataBanner = async (typeBanner) => {
 
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/typeBanners/${typeBanner}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/typeBanners/${typeBanner}`, {
+      method: "GET",
+      // body: JSON.stringify(value),
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+      },
+    });
     if (!response.ok) {
       throw new Error(`Failed to fetch data: ${response.status}`);
     }

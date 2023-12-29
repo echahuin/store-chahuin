@@ -12,20 +12,16 @@ const nextConfig = {
           },
         ],
     },
-    headers: async () => [
-      {
-        key: "Access-Control-Allow-Origin",
-        value: "*",
-      },
-      {
-        key: "Access-Control-Allow-Headers",
-        value: "Content-Type",
-      },
-      {
-        key: "Access-Control-Allow-Methods",
-        value: "GET, POST, PUT, DELETE",
-      },
-    ],
+    // headers: async () => [
+    //   {
+    //     source: "/api/typeBanners/*",
+    //     headers: [
+    //       { key: "Access-Control-Allow-Origin", value: "*" },
+    //       { key: "Access-Control-Allow-Headers", value: "Content-Type" },
+    //       { key: "Access-Control-Allow-Methods", value: "GET, POST, PUT, DELETE" },
+    //     ],
+    //   },
+    // ],
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
     },

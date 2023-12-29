@@ -6,6 +6,7 @@ const addUserDb = async (value) => {
         method: "POST",
         body: JSON.stringify(value),
         headers: {
+          "Access-Control-Allow-Origin": "*",
           "Content-Type": "application/json",
         },
       });
