@@ -9,7 +9,6 @@ const getDataBanner = async (typeBanner) => {
   
     const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/typeBanners/${typeBanner}`, {
       method: "GET",
-      // body: JSON.stringify(value),
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
@@ -30,13 +29,13 @@ const getDataBanner = async (typeBanner) => {
 const Home = async() => {
   
   const data = await getDataBanner('big-1')
-  console.log(data)
+  // console.log(data)
 
   return (
     <div style={{ background: '#F1F1F1' }}>
       <PrincipalBanner />
         {/* <SectionBanner products={data.smallsBannerData} /> */}
-        <Suspense fallback={<>loading</>}>
+       <Suspense fallback={<>loading</>}>
           <Banner products={data} />
         </Suspense>
         {/* <SectionBanner products={data.smallsBannerData2} />
