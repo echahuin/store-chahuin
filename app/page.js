@@ -1,5 +1,6 @@
 import Banner from './components/Banner';
 import PrincipalBanner from './components/PrincipalBanner';
+import SectionBanner from './components/SectionBanner';
 import Footer from './components/UI/Footer';
 import { Suspense } from 'react';
 
@@ -28,18 +29,20 @@ const getDataBanner = async (typeBanner) => {
 
 const Home = async() => {
   
-  const data = await getDataBanner('big-1')
-  // console.log(data)
+  const big1 = await getDataBanner('big-1')
+  const big2 = await getDataBanner('big-2')
+  const small1 = await getDataBanner('small-1')
+  const small2 = await getDataBanner('small-2')
 
   return (
     <div style={{ background: '#F1F1F1' }}>
       <PrincipalBanner />
-        {/* <SectionBanner products={data.smallsBannerData} /> */}
        <Suspense fallback={<>loading</>}>
-          <Banner products={data} />
+          <SectionBanner products={small1} />
+          <Banner products={big1} />
+          <SectionBanner products={small2} /> 
+          <Banner products={big2} />
         </Suspense>
-        {/* <SectionBanner products={data.smallsBannerData2} />
-        <Banner products={data.bigBannerData2} /> */}
       <Footer />
     </div>
   );
