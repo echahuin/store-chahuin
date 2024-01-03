@@ -36,7 +36,7 @@ const Home = async() => {
       <PrincipalBanner />
         {/* <SectionBanner products={data.smallsBannerData} /> */}
        <Suspense fallback={<>loading</>}>
-          <Banner products={data} />
+          {/* <Banner products={data} /> */}
         </Suspense>
         {/* <SectionBanner products={data.smallsBannerData2} />
         <Banner products={data.bigBannerData2} /> */}
