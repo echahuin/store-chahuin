@@ -2,13 +2,15 @@ import React from 'react'
 import style from './style.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
+import getProducts from '@/app/utils/admin/getProducts'
 
 const ProductTableAdmin = async() => {
 
-    const items = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/products/all`, { 
-    next: {
-      revalidate: 0,
-     },}).then(res => res.json()) 
+    const items = await getProducts()
+    // const items = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/products/all`, { 
+    // next: {
+    //   revalidate: 0,
+    //  },}).then(res => res.json()) 
 
     return (
     <>

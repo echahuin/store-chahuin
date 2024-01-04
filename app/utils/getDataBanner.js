@@ -3,7 +3,6 @@ const getDataBanner = async (typeBanner) => {
   try {
   
     const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/typeBanners/${typeBanner}`, {
-      // cache: "no-store",
       next: {
         revalidate: 0,
        },

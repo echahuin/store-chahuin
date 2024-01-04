@@ -3,10 +3,28 @@ import React, {useState} from 'react'
 import ButtonSmall from '@/app/components/UI/ButtonSmall'
 import { CATEGORIES } from '@/app/const/optionsCategory'
 import { useRouter } from 'next/navigation';
-import  addProduct from '@/app/utils/admin/addProduct';
+import addProduct from '@/app/utils/admin/addProduct';
 import uploadImage from '@/app/utils/admin/image/uploadImage';
 
-const CreateForm = ({data}) => {
+const Select = ({ id, name, value, onChange }) => {
+  return (
+    <select  
+      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+      id={id} 
+      name={name} 
+      value={value}
+      required
+      onChange={onChange}>
+      {CATEGORIES.map((option, index) => (
+        <option key={index} value={option.value}>
+          {option.value}
+        </option>
+      ))}
+    </select>
+  );
+};
+
+const CreateForm = ({data, editForm = false}) => {
 
 const router = useRouter()
 
@@ -24,6 +42,7 @@ const router = useRouter()
 
 
   const handleChange = (e) => {
+  console.log(e.target.value)
     setValues({ 
       ...values, 
       [e.target.name]: e.target.value 
@@ -33,11 +52,24 @@ const router = useRouter()
   const handleSubmit = async (e) => {
   
     e.preventDefault()
-    
-    const urlImg = await uploadImage(file, values.slug).then((urlImg) => urlImg)
-    if(urlImg){
-      await addProduct({...values, img: urlImg}, file).then(() => router.push('/admin'))
+    console.log(editForm)
+    if (!editForm) {
+      const urlImg = await uploadImage(file, values.slug).then((urlImg) => urlImg) 
+      if( urlImg){
+        await addProduct({...values, img: urlImg}, file).then(() => router.push('/admin'))
+      }
     }
+    if(editForm){
+      if(file === null){
+        await addProduct({...values, img: data.img}, file).then(() => router.push('/admin'))
+      }else{
+        const urlImg = await uploadImage(file, values.slug).then((urlImg) => urlImg) 
+        if( urlImg){
+          await addProduct({...values, img: urlImg}, file).then(() => router.push('/admin'))
+        } 
+      }
+    } 
+    
   }
 
   return (
@@ -104,17 +136,11 @@ const router = useRouter()
             <div className="sm:col-span-4">
               <label for="category" className="block text-sm font-medium leading-6 text-gray-900">Category</label>
               <div className="mt-2">
-                <select 
+              <Select  
                   id="category" 
-                  name="category"
-                  autocomplete="category-name" 
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                  onChange={handleChange}
-                >
-                  {CATEGORIES.map((item, index)=>{
-                    return <option key={index}>{item.value}</option>
-                  })}
-                </select>
+                  name="category" 
+                  value={values.category} 
+                  onChange={handleChange} />
               </div>
             </div>
             <div className="sm:col-span-4">
@@ -136,7 +162,7 @@ const router = useRouter()
                   type="file" 
                   accept="image/*" 
                   allowMultiple={false}
-                  required 
+                  required={editForm ? false : true}
                   className='block w-full border p-2 my-2' 
                   onChange={(e) => setFile(e.target.files[0])}
                 />               
@@ -145,7 +171,7 @@ const router = useRouter()
       </div>
     </div>
   </div>
-  <ButtonSmall type="submit" text="Create" />
+  <ButtonSmall type="submit" text={editForm ? "Edit":"Create"} />
 </form>
   )
 }

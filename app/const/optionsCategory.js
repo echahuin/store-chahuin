@@ -4,5 +4,6 @@ export const CATEGORIES = [
     {value: "zapato-dama", label: "Zapato Dama"},
     {value: "zapato-hombre", label: "Zapato Hombre"},
     {value: "camisa-dama", label: "Camisa Dama"},
-    {value: "buso-dama", label: "Buso Dama"}
+    {value: "buso-dama", label: "Buso Dama"},
+    {value: "", label: ""},
 ]
