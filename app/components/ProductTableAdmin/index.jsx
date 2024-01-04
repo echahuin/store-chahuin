@@ -5,7 +5,10 @@ import Image from 'next/image'
 
 const ProductTableAdmin = async() => {
 
-    const items = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/products/all`, {cache: 'no-store' }).then(res => res.json()) 
+    const items = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/products/all`, { 
+    next: {
+      revalidate: 0,
+     },}).then(res => res.json()) 
 
     return (
     <>
@@ -37,8 +40,8 @@ const ProductTableAdmin = async() => {
                     <td>{item.slug}</td>
                     <td>{item.stock}</td>
                     <td>{item.title}</td>
-                    { item.dataBanner.typeBanner ? <td><span className='text-gray-300'>disable</span></td> : <td className='cursor-pointer' ><Link href={`/admin/edit/${item.slug}`} className="text-blue-500">Edit...</Link></td> } 
-                    { item.dataBanner.typeBanner ? <td><span className='text-gray-300'>disable</span></td> : <td className='cursor-pointer' ><Link href={`/admin/delete/${item.slug}`} className='text-red-300' >Delete...</Link></td>}
+                    { item.dataBanner.typeBanner ? <td><span className='text-gray-300'>disable</span></td> : <td ><Link href={`/admin/edit/${item.slug}`} className="text-blue-500">Edit...</Link></td> } 
+                    { item.dataBanner.typeBanner ? <td><span className='text-gray-300'>disable</span></td> : <td ><Link href={`/admin/delete/${item.slug}`} className='text-red-300' >Delete...</Link></td>}
                     </tr>
                 )
               })}

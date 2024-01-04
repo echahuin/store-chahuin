@@ -1,27 +1,10 @@
 "use client"
 import React, {useState} from 'react'
 import ButtonSmall from '@/app/components/UI/ButtonSmall'
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { CATEGORIES } from '@/app/const/optionsCategory'
-import { doc,  setDoc,  } from "firebase/firestore";
-import { db, storage } from '@/firebase/config'
 import { useRouter } from 'next/navigation';
-
-
-// mover a utils
-const createProduct = async (values, file) => {
-
-  const storageRef = ref(storage, values.slug)
-  const fileSnapshot = await uploadBytes(storageRef, file)
-  const fileURL = await getDownloadURL( fileSnapshot.ref )
-
-  const docRef = doc(db, "products", values.slug)
-  
-  return setDoc(docRef, {
-      ...values,
-      img: fileURL
-  })
-}
+import  addProduct from '@/app/utils/admin/addProduct';
+import uploadImage from '@/app/utils/admin/image/uploadImage';
 
 const CreateForm = ({data}) => {
 
@@ -48,9 +31,13 @@ const router = useRouter()
   }
 
   const handleSubmit = async (e) => {
+  
     e.preventDefault()
-    await createProduct(values, file).then(() => router.push('/admin'))
-
+    
+    const urlImg = await uploadImage(file, values.slug).then((urlImg) => urlImg)
+    if(urlImg){
+      await addProduct({...values, img: urlImg}, file).then(() => router.push('/admin'))
+    }
   }
 
   return (

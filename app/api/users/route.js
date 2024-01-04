@@ -18,7 +18,6 @@ export async  function POST( req ){
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
-            // return error, user already exists
             return NextResponse.json({data: 'user already exists'}, {status: 500});
 
         } else {
