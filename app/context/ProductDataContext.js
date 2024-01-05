@@ -16,9 +16,9 @@ export const ProductDataProvider = ({ children }) => {
         
     }
     const handleFilterData = (value) => {
-       
-        setFilterData(products.filter((item) => item.price <= value?.priceMax));
-   
+        
+        // value?.priceMax && setFilterData(products.filter((item) => item.price <= value?.priceMax));
+        value?.search && setFilterData(products.filter((item) => item.title.toLowerCase().includes(value?.search.toLowerCase())));
     }
     const clearProducts = () => {
     

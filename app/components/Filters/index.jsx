@@ -30,7 +30,14 @@ useEffect(() => {
     handleFilterData(values)
   }
   
-  
+  const setData = () => {
+    setValues({
+      priceMax: '',
+      search: ''
+    })
+    setSearchData('all')
+  }
+    
   
   
   return (
@@ -58,6 +65,9 @@ useEffect(() => {
         </div>
         <div className={styles.button} >
           <ButtonSmall type="submit" text="filtrar" />
+        </div>
+        <div className= {`${styles.setButton} pt-3`} >
+          <ButtonSmall onClick={setData} text="Mostrar Todos" />
         </div>
       </form>
     </div>

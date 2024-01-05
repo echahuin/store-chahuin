@@ -13,12 +13,10 @@ const Product = async({params}) => {
   return (
     <div >
         <Filters productsData={dataResponse}>
-          <ProductList />
+          <Suspense fallback={<div className="w-full h-full justify-content:center align-items:center bg-red-500">Loading...</div>}>
+            <ProductList />
+          </Suspense>
         </Filters>
-        {/* <Filters  productsData={dataResponse}/>
-        <Suspense fallback={<div className="w-full h-full justify-content:center align-items:center bg-red-500">Loading...</div>}>
-          <ProductList productsData={dataResponse}/>
-        </Suspense> */}
     </div>
   )
 }
