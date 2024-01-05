@@ -2,22 +2,18 @@ import styles from './card.module.scss';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import truncateWords from '@/app/tools/truncateWords';
 
 function Card({ data }) {
 
   const {slug, name, title, description, price, img, stock } = data;
-
-  const truncatedDescription =
-    description && description.length > 30
-      ? description.substring(0, 30) + '...'
-      : description;
 
   return (
     <Link href={`/product/description/${slug}`}>
       <div className={`${styles.card} group relative text-sm `}>
         <div className={styles.contImgCard}>
           <Image
-            className={`${styles.imgCard} aspect-h-1 aspect-w-1 overflow-hidden bg-gray-100 group-hover:opacity-75`}
+            className={`${styles.imgCard} overflow-hidden bg-gray-100 group-hover:opacity-75`}
             style={{ objectFit: 'cover', position: 'relative' }}
             src={img}
             width={390}
@@ -26,8 +22,8 @@ function Card({ data }) {
             />
         </div>
         <div className={styles.descriptionCard}>
-          <h1>{title}</h1>
-          <p>{truncatedDescription}</p>
+          <h1>{truncateWords(title, 20)}</h1>
+          <p>{truncateWords(description, 28)}</p>
           <div className={styles.footerData}>
             <span className={``} >Stock: {stock}</span>
             <h3>{price}$</h3>

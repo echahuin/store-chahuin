@@ -3,6 +3,7 @@ import styles from './banner.module.scss';
 import Image from 'next/image'
 import Link from 'next/link'
 import ButtonSmall from '../UI/ButtonSmall';
+import truncateWords from '@/app/tools/truncateWords';
     
 const Banner = ({products}) => {
     const { category } = products.data[0]
@@ -21,8 +22,8 @@ const Banner = ({products}) => {
                 </div>
                 <div className={styles.contText}>
                     {products && <div>
-                        <h1 className={styles.title}>{titleBanner}</h1>
-                        <p className={styles.subtitle}>{descriptionBanner}</p>
+                        <h1 className={styles.title}>{truncateWords(titleBanner, 21)}</h1>
+                        <p className={styles.subtitle}>{truncateWords(descriptionBanner, 35)}</p>
                     </div>}
                     <Link  href={`/product/${category}`}>
                         <ButtonSmall text="Ver mas"/>

@@ -3,6 +3,7 @@ import styles from './bannerSmall.module.scss';
 import Image from 'next/image'
 import Link from 'next/link'
 import ButtonSmall from '../UI/ButtonSmall';
+import truncateWords from '@/app/tools/truncateWords';
 
 
 function BannerSmall({data}) {
@@ -13,7 +14,7 @@ function BannerSmall({data}) {
     <div style={{background: `${color}`}} className={styles.bannerSmall} >
       <div className={styles.contTextBannerSmall} >
               <h4>{category}</h4>
-              <h1>{titleBanner}</h1>
+              <h1>{truncateWords(titleBanner, 21)}</h1>
             <div className={styles.buttonDetail}>
               <Link  href={`/product/${category}`}>
                 <ButtonSmall text="Ver mas"/>
