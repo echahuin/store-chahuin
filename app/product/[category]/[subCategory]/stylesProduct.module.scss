@@ -6,11 +6,11 @@
     width: 100%;
 }
 .listMenu{
-    width: 16rem;
+    width: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     height: 100vh;
     background: rgb(222, 221, 221);
     padding: 1.5rem;
@@ -24,27 +24,31 @@
     .contDetail {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
     }
     .listMenu{
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
         height: auto;
         background: rgb(222, 221, 221);
         padding-top: 7.5rem;
     }
     .listMenu ul {
-        overflow: scroll;
-        overflow-y: hidden;
+        overflow: hidden;
+        overflow-x: auto;
+        scrollbar-color: yellow;
         border-left: 1px solid #979797c7;
-        border-left: 1px solid #979797c7;
+        border-right: 1px solid #979797c7;
         display: flex;
         align-items: center;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
+    }
+    .listMenu ul::-webkit-scrollbar {
+        display: none;  
     }
     .listMenu ul li {
         padding: 0rem .5rem;
