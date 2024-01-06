@@ -38,9 +38,25 @@
     background-color: #e5e5e5;
   }
   
+.widthButton {
+    width: 10rem;
+}
+.alignButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
   @media only screen and (max-width: 64rem){
     .fotoPerfilInput {
+        width: 12rem;
+    }
+    .widthButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 10rem;
+        // height: 1rem;
     }
     
 }

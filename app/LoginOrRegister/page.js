@@ -24,7 +24,13 @@ const LoginOrRegister = () => {
       </div>
       <div onClick={loginGoogle} className={styles.contLoginGoogle}>
         <div className={styles.loginGoogle}>
-            <Image src={'/icon-google.svg'} height={35} width={35} alt='icon-google'/>
+            <Image 
+              src={'/icon-google.svg'}
+              className={styles.iconGoogle}
+              height={35} 
+              width={35} 
+              alt='icon-google'
+            />
             <p className="text-center font-semibold leading-7 text-gray-900 pt-9"> Ingresár con google</p>
         </div>
       </div>

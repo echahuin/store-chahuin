@@ -35,7 +35,7 @@ const LoginClient = () => {
         <div>
           <div className="border-b border-gray-900/10 p-5 pb-8 pt-11">
             <h2 className="text-center font-semibold leading-7 text-gray-900 pb-9">Ingresá</h2>
-            <div className="mt-19 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div className=" grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
               <div className="sm:col-span-3">
                 <label for="email" className="block text-sm font-medium leading-6 text-gray-900">Email</label>
                 <div className="mt-2">
@@ -52,7 +52,11 @@ const LoginClient = () => {
             </div>
           </div>
         </div>
-        <ButtonSmall type="submit" text="Ingresar" />
+        <div className={styles.alignButton} >
+          <div className={styles.widthButton}>
+            <ButtonSmall type="submit" text="Ingresar" />
+          </div>
+        </div>
       </form>
     </div>
   );
