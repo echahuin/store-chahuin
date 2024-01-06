@@ -25,7 +25,7 @@ const Banner = ({products}) => {
                         <h1 className={styles.title}>{truncateWords(titleBanner, 21)}</h1>
                         <p className={styles.subtitle}>{truncateWords(descriptionBanner, 35)}</p>
                     </div>}
-                    <Link  href={`/product/${category}`}>
+                    <Link  href={`/product/${category}/all`}>
                         <ButtonSmall text="Ver mas"/>
                     </Link>
                 </div>

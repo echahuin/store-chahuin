@@ -1,7 +1,7 @@
 
-const getProductCategory = async (categoryData) => {
+const getProductCategory = async (category_subCategory) => {
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/products/${categoryData}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/products/subCategory/${category_subCategory}`, {
       next: {
        revalidate: 0,
       }
