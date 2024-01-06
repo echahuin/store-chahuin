@@ -4,8 +4,43 @@
     align-items: center;
     justify-content: center;
 }
-@media only screen and (max-width: 64rem){
-    .createForm{
-        padding-top: 15rem;   
+.fotoPerfilInput {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease-in-out;
+}
+  
+  .fotoPerfilInput:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+  
+  .fotoPerfilInput:focus {
+    outline: 2px solid #5e72e4;
+  }
+  
+  .fotoPerfilInput::file-selector-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #e4e4e4;
+    border-radius: inherit;
+    font-size: 1rem;
+    color: #2e2929;
+    cursor: pointer;
+  }
+  
+  .fotoPerfilInput::file-selector-button:hover {
+    background-color: #e5e5e5;
+  }
+  
+  @media only screen and (max-width: 64rem){
+    .fotoPerfilInput {
+        width: 10rem;
     }
+    
 }
