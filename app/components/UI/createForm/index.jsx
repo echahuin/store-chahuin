@@ -5,6 +5,8 @@ import { CATEGORIES } from '@/app/const/optionsCategory'
 import { useRouter } from 'next/navigation';
 import addProduct from '@/app/utils/admin/addProduct';
 import uploadImage from '@/app/utils/admin/image/uploadImage';
+import styles from './styles.module.scss'
+
 
 const Select = ({ id, name, value, onChange }) => {
   return (
@@ -76,7 +78,7 @@ const router = useRouter()
 
     <form onSubmit={handleSubmit}>
     <div>
-      <div className="border-b border-gray-900/10 pb-8 pt-11">
+      <div className="border-b border-gray-900/10 p-5 pb-8 pt-11">
       <h2 className="text-center font-semibold leading-7 text-gray-900 pb-5">Datos - producto</h2>
       <div className="mt-19 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-3">
@@ -176,7 +178,7 @@ const router = useRouter()
                   accept="image/*" 
                   allowMultiple={false}
                   required={editForm ? false : true}
-                  className='block w-full border p-2 my-2' 
+                  className={styles.fotoPerfilInput}
                   onChange={(e) => setFile(e.target.files[0])}
                 />               
               </div>
@@ -184,7 +186,11 @@ const router = useRouter()
       </div>
     </div>
   </div>
-  <ButtonSmall type="submit" text={editForm ? "Edit":"Create"} />
+  <div className={styles.alignButton} >
+    <div className={styles.widthButton}>
+      <ButtonSmall type="submit" text={editForm ? "Edit":"Create"} />
+    </div>
+  </div>
 </form>
   )
 }

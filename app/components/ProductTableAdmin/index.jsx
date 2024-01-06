@@ -7,10 +7,6 @@ import getProducts from '@/app/utils/admin/getProducts'
 const ProductTableAdmin = async() => {
 
     const items = await getProducts()
-    // const items = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/products/all`, { 
-    // next: {
-    //   revalidate: 0,
-    //  },}).then(res => res.json()) 
 
     return (
     <>

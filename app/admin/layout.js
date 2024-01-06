@@ -17,7 +17,11 @@ const AdminLayout = ({ children }) => {
             <Link className="hover:text-blue-500" href={'/admin/orders'}>orders</Link>
         </div>}
         <Suspense fallback={<>Loagin table...</>}>
-        { user.logged && (user.rol === "admin") ? children : <>hi</>}
+        { user.logged && (user.rol === "admin") && 
+        <div className={styles.contTableAdmin}>
+           { children}
+        </div>
+        }
         </Suspense>
     
     </div>

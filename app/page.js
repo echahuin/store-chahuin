@@ -14,13 +14,13 @@ const Home = async() => {
 
   return (
     <div style={{ background: '#F1F1F1' }}>
-      <PrincipalBanner />
-       <Suspense fallback={<>loading</>}>
-          <SectionBanner products={small1} />
-          <Banner products={big1} />
-          <SectionBanner products={small2} /> 
-          <Banner products={big2} />
-        </Suspense>
+        <PrincipalBanner />
+         <Suspense fallback={<>loading</>}>
+            <SectionBanner products={small1} />
+            <Banner products={big1} />
+            <SectionBanner products={small2} /> 
+            <Banner products={big2} />
+          </Suspense>
       <Footer />
     </div>
   );
