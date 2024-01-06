@@ -1,6 +1,7 @@
 import ProductList from '@/app/components/ProductList'
 import getProductSubCategory from '@/app/utils/getProductSubCategory'
-import React from 'react'
+import React, { Suspense } from 'react'
+import Loading from '@/app/components/UI/Loading'
 
 const SubCategory = async ({params}) => {
 
@@ -9,7 +10,9 @@ const SubCategory = async ({params}) => {
     const data = await getProductSubCategory(category_subCategory)
 
   return (
-  <ProductList filterData={data}/>
+  <Suspense fallback={<Loading />}>
+    <ProductList filterData={data}/>
+  </Suspense>
   )
 }
 

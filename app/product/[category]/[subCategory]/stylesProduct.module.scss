@@ -18,7 +18,12 @@
 
 .listMenu ul li {
     text-transform: capitalize;
+    padding: .4rem 0rem;
 }
+.listMenu ul li:hover {
+    font-weight: 600;
+}
+
 
 @media only screen and (max-width: 56.25rem){
     .contDetail {
