@@ -20,6 +20,39 @@ const ProductsLayout = async ({children, params}) => {
         <div className={`${styles.contDetail}`}>
           <div className={styles.listMenu}>
             <ul>
+            <li>
+                <Link  href={`/product/${category}/all`}>
+                  Todos
+                </Link>
+              </li>
+              <li>
+                <Link  href={`/product/${category}/all`}>
+                  Todos
+                </Link>
+              </li>
+              <li>
+                <Link  href={`/product/${category}/all`}>
+                  Todos
+                </Link>
+              </li>
+              <li>
+                <Link  href={`/product/${category}/all`}>
+                  Todos
+                </Link>
+              </li>
+              <li>
+                <Link  href={`/product/${category}/all`}>
+                  Todos
+                </Link>
+              </li> <li>
+                <Link  href={`/product/${category}/all`}>
+                  Todos
+                </Link>
+              </li> <li>
+                <Link  href={`/product/${category}/all`}>
+                  Todos
+                </Link>
+              </li>
               <li>
                 <Link  href={`/product/${category}/all`}>
                   Todos

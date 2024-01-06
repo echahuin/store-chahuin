@@ -26,4 +26,34 @@
         align-items: center;
         justify-content: center;
     }
+    .listMenu{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        height: auto;
+        background: rgb(222, 221, 221);
+        padding-top: 7.5rem;
+    }
+    .listMenu ul {
+        overflow: scroll;
+        overflow-y: hidden;
+        border-left: 1px solid #979797c7;
+        border-left: 1px solid #979797c7;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .listMenu ul li {
+        padding: 0rem .5rem;
+    }
+}
+
+
+@media only screen and (max-width: 28rem){
+    .listMenu{
+        padding-top: 5.5rem;
+    }
 }

@@ -4,6 +4,7 @@ import SectionBanner from './components/SectionBanner';
 import Footer from './components/UI/Footer';
 import { Suspense } from 'react';
 import getDataBanner from './utils/getDataBanner';
+import Loading from './components/UI/Loading';
 
 const Home = async() => {
   
@@ -15,12 +16,13 @@ const Home = async() => {
   return (
     <div style={{ background: '#F1F1F1' }}>
         <PrincipalBanner />
-         <Suspense fallback={<>loading</>}>
+         <Suspense fallback={<Loading />}>
             <SectionBanner products={small1} />
             <Banner products={big1} />
             <SectionBanner products={small2} /> 
             <Banner products={big2} />
           </Suspense>
+         
       <Footer />
     </div>
   );
