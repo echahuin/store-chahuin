@@ -11,14 +11,15 @@ export const ProductDataProvider = ({ children }) => {
 
     const setProducts = (products) => {
     
-        setProductsData(products)
-        setFilterData(products)
+        // setProductsData(products)
+        // setFilterData(products)
         
     }
     const handleFilterData = (value) => {
         
+        setFilterData(value)
         // value?.priceMax && setFilterData(products.filter((item) => item.price <= value?.priceMax));
-        value?.search && setFilterData(products.filter((item) => item.title.toLowerCase().includes(value?.search.toLowerCase())));
+        // value?.search && setFilterData(products.filter((item) => item.title.toLowerCase().includes(value?.search.toLowerCase())));
     }
     const clearProducts = () => {
     

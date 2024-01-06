@@ -1,9 +1,9 @@
 export const CATEGORIES = [
-    {value: "camisa-hombre", label: "Camisa Hombre"},
-    {value: "jean-dama", label: "Jeans Dama"},
-    {value: "zapato-dama", label: "Zapato Dama"},
-    {value: "zapato-hombre", label: "Zapato Hombre"},
-    {value: "camisa-dama", label: "Camisa Dama"},
-    {value: "buso-dama", label: "Buso Dama"},
+    {value: "camisa", label: "Camisa"},
+    {value: "jean", label: "Jeans"},
+    {value: "zapato", label: "Zapato"},
+    {value: "zapato", label: "Zapato"},
+    {value: "camisa", label: "Camisa"},
+    {value: "buso", label: "Buso"},
     {value: "", label: ""},
 ]

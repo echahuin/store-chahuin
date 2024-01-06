@@ -16,7 +16,7 @@ function BannerSmall({data}) {
               <h4>{category}</h4>
               <h1>{truncateWords(titleBanner, 21)}</h1>
             <div className={styles.buttonDetail}>
-              <Link  href={`/product/${category}`}>
+              <Link  href={`/product/${category}/all`}>
                 <ButtonSmall text="Ver mas"/>
               </Link>
             </div>

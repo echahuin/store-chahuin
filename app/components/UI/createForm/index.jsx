@@ -35,6 +35,7 @@ const router = useRouter()
     price: data?.price ? data?.price : 0,
     stock: data?.stock ? data?.stock : 0,
     category: data?.category ? data?.category : '',
+    subCategory: data?.subCategory ? data?.subCategory : '',
     description: data?.description ? data?.description : '',
     banner: false,
     dataBanner: {}
@@ -42,7 +43,6 @@ const router = useRouter()
 
 
   const handleChange = (e) => {
-  console.log(e.target.value)
     setValues({ 
       ...values, 
       [e.target.name]: e.target.value 
@@ -141,6 +141,19 @@ const router = useRouter()
                   name="category" 
                   value={values.category} 
                   onChange={handleChange} />
+              </div>
+            </div>
+            <div className="sm:col-span-3">
+              <label for="subCategory" className="block text-sm font-medium leading-6 text-gray-900">subCategory</label>
+              <div className="mt-2">
+                <input 
+                    type='text'
+                    value={values.subCategory}
+                    required 
+										className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    name='subCategory' 
+                    onChange={handleChange} 
+                />              
               </div>
             </div>
             <div className="sm:col-span-4">

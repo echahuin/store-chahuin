@@ -1,12 +1,8 @@
-"use client"
 import React from 'react'
 import Card from '../Card'
 import styles from './styles.module.scss'
-import { useProductDataContext } from '@/app/context/ProductDataContext'
 
-const ProductList = () => {
-
-  const { filterData } = useProductDataContext()
+const ProductList = ({filterData}) => {
 
   return (
     <div className={styles.contCards}>
