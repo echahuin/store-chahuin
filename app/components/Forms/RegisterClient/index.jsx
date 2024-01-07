@@ -24,17 +24,32 @@ const RegisterClient = () => {
         [e.target.name]: e.target.value 
       })
     }
-    const updateMessage = () => {
-      setAlertMessage('Ya estas registrado')
+    const updateMessage = (msg) => {
+      setAlertMessage(msg)
     }
   
     const handleSubmit = async (e) => {
       e.preventDefault();
       const ret = await registerUser(values, file);
+      console.log(ret)
       if(ret?.ok){
         location.reload()
-      }if(ret?.error?.customData._tokenResponse?.error?.message === 'EMAIL_EXISTS'){
-        const id = setInterval(updateMessage, 2000);
+      }if(ret?.error?.code === 'auth/email-already-in-use'){
+        const id = setInterval(updateMessage('Ya estas registrado'), 2000);
+        setTimeout(() => {
+          clearInterval(id);
+          setAlertMessage('')
+        }, 4000);
+      }
+      if(ret.error.code === 'auth/invalid-email'){
+        const id = setInterval(updateMessage('Email incorrecto'), 2000);
+        setTimeout(() => {
+          clearInterval(id);
+          setAlertMessage('')
+        }, 4000);
+      }
+      if(ret.error.code === 'auth/weak-password'){
+        const id = setInterval(updateMessage('Password incorrecto'), 2000);
         setTimeout(() => {
           clearInterval(id);
           setAlertMessage('')
@@ -48,7 +63,7 @@ const RegisterClient = () => {
       <form onSubmit={handleSubmit}>
           <div>
             <div className=" border-gray-900/10 p-5 pb-8 pt-11">
-            <h2 className="text-center font-semibold leading-7 text-gray-900 pb-9">Necesitas Registrate</h2>
+            <h2 className="text-center font-semibold leading-7 text-gray-900 pb-9">Registrate</h2>
             <div className="mt-19 grid grid-cols-1 gap-x-2 gap-y-8 sm:grid-cols-6">
               <div className="sm:col-span-3">
                 <label for="displayName" className="block text-sm font-medium leading-6 text-gray-900">Nombre</label>

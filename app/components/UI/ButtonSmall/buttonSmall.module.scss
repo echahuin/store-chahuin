@@ -7,6 +7,7 @@
     cursor: pointer;
     text-align: center;
     box-shadow: 0px 0px 15px 0px rgba(143, 143, 143, 0.75);
+    position: relative;
 }
 .button:hover{
     box-shadow: 0px 0px 5px 0px rgba(254, 254, 254, 0.75);
@@ -14,6 +15,40 @@
 .button:active {
     box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
 }
+
+.loadingButton{
+    width: 100%;
+}
+
+.loadingButton::before, .loadingButton::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg, 
+    #0126f6,
+    #5c70de, 
+    #a5aee3,  
+    #3b3d44, 
+    #2d3354, 
+    #040e43);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    animation: animate 20s linear infinite;
+    z-index: -10;
+}
+@keyframes animate {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
 
 @media only screen and (max-width: 56.25rem){
     .button {
