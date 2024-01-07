@@ -26,12 +26,8 @@
     top: -2px;
     left: -2px;
     background: linear-gradient(45deg, 
-    #0126f6,
-    #5c70de, 
-    #a5aee3,  
-    #3b3d44, 
-    #2d3354, 
-    #040e43);
+    #0020d8,
+    #ffffff00);
     background-size: 400%;
     width: calc(100% + 5px);
     height: calc(100% + 5px);
@@ -43,7 +39,7 @@
       background-position: 0 0;
     }
     50% {
-      background-position: 400% 0;
+      background-position: 1000% 0;
     }
     100% {
       background-position: 0 0;
