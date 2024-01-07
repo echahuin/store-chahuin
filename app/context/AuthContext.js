@@ -54,11 +54,19 @@ import addUserDb from "@/app/utils/addUserDb"
         }
         
         const loginUser = async (values) => {
-           await signInWithEmailAndPassword(auth, values.email, values.password)
+           try {
+               await signInWithEmailAndPassword(auth, values.email, values.password)
+           } catch (error) {
+                return { ok: false , error:  error }
+           }
         }
 
         const logoutUser = async () => {
+        try {
             await signOut(auth)
+        } catch (error) {
+            return { ok: false , error:  error }
+        }
         }
         
         const loginGoogle = async () => {

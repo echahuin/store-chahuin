@@ -9,6 +9,7 @@ const RegisterClient = () => {
     const { registerUser } = useAuthContext();
     
     const [file, setFile] = useState(null)
+    const [alertMessage, setAlertMessage] = useState();
     const [values, setValues] = useState({
       displayName: '',
       email: '',
@@ -23,21 +24,27 @@ const RegisterClient = () => {
         [e.target.name]: e.target.value 
       })
     }
+    const updateMessage = () => {
+      setAlertMessage('Ya estas registrado')
+    }
   
     const handleSubmit = async (e) => {
       e.preventDefault();
       const ret = await registerUser(values, file);
-      
-      if(ret.ok){
-        console.log('success')
+      if(ret?.ok){
         location.reload()
-      }else {
-        console.log('error')
+      }if(ret?.error?.customData._tokenResponse?.error?.message === 'EMAIL_EXISTS'){
+        const id = setInterval(updateMessage, 2000);
+        setTimeout(() => {
+          clearInterval(id);
+          setAlertMessage('')
+        }, 4000);
       }
     };
   
     return (
       <div className={styles.contTypeRegister}>
+     
       <form onSubmit={handleSubmit}>
           <div>
             <div className=" border-gray-900/10 p-5 pb-8 pt-11">
@@ -93,6 +100,9 @@ const RegisterClient = () => {
           </div>
         </div>
       </form>
+      <div className={styles.alert}>
+        {alertMessage}
+      </div>
       </div>
     );
 }

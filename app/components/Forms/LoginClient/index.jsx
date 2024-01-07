@@ -8,6 +8,7 @@ import { useAuthContext } from '@/app/context/AuthContext'
 const LoginClient = () => {
   
   const { loginUser } = useAuthContext()
+  const [alertMessage, setAlertMessage] = useState();
   const [values, setValues] = useState({
     displayName: '',
     email: '',
@@ -23,10 +24,21 @@ const LoginClient = () => {
       [name]: value,
     });
   };
+  
+  const updateMessage = () => {
+    setAlertMessage('Credenciales invalidas')
+  }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    loginUser(values);
+    const stateLogin = await loginUser(values);
+    if(stateLogin?.ok === false && (stateLogin?.error.code === 'auth/invalid-credential')) {
+      const id = setInterval(updateMessage, 2000);
+      setTimeout(() => {
+        clearInterval(id);
+        setAlertMessage('')
+      }, 4000);
+    }
   };
 
   return (
@@ -39,14 +51,13 @@ const LoginClient = () => {
               <div className="sm:col-span-3">
                 <label for="email" className="block text-sm font-medium leading-6 text-gray-900">Email</label>
                 <div className="mt-2">
-                  <input onChange={handleChange} type="text" name="email" id="email" autocomplete="email" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                  <input onChange={handleChange} required type="text" name="email" id="email" autocomplete="email" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                 </div>
               </div>
-  
               <div className="sm:col-span-3">
                 <label for="password" className="block text-sm font-medium leading-6 text-gray-900">Contraseña</label>
                 <div className="mt-2">
-                  <input onChange={handleChange} type="password" name="password" id="password" autocomplete="phone-number" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                  <input onChange={handleChange} required type="password" name="password" id="password" autocomplete="phone-number" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                 </div>
               </div>
             </div>
@@ -58,6 +69,9 @@ const LoginClient = () => {
           </div>
         </div>
       </form>
+      <div className={styles.alert}>
+        {alertMessage}
+      </div>
     </div>
   );
 }
