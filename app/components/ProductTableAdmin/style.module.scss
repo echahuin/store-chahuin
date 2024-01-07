@@ -5,7 +5,8 @@
     flex-direction: column;
     height: auto;
     padding-top: 0rem;
-    background-color: #931717;
+    overflow: hidden !important;
+    // background-color: #931717;
 }
 .contTable h1{
     font-size: 2rem;

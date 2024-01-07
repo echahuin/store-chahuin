@@ -22,7 +22,6 @@ const Home = async() => {
             <SectionBanner products={small2} /> 
             <Banner products={big2} />
           </Suspense>
-         
       <Footer />
     </div>
   );
