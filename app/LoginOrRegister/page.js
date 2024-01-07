@@ -19,7 +19,7 @@ const LoginOrRegister = () => {
       <div className="text-center font-semibold leading-7 text-gray-900 pt-9">
           <p>¿Ya tenés una cuenta?</p>
           <div className='cursor-pointer text-blue-500'  onClick={()=>setTypeFormLogin(!typeFormLogin)}>
-              { !typeFormLogin ?  <p >Inicia sesión</p> : <p>Registarse</p> }
+              { !typeFormLogin ? <p>Registarse</p>  : <p >Inicia sesión</p> }
           </div>
       </div>
       <div onClick={loginGoogle} className={styles.contLoginGoogle}>

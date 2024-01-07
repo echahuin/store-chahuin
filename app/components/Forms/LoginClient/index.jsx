@@ -33,7 +33,7 @@ const LoginClient = () => {
     <div className={styles.contTypeLogin}>
       <form onSubmit={handleSubmit}>
         <div>
-          <div className="border-b border-gray-900/10 p-5 pb-8 pt-11">
+          <div className=" border-gray-900/10 p-5 pb-8 pt-11">
             <h2 className="text-center font-semibold leading-7 text-gray-900 pb-9">Ingresá</h2>
             <div className=" grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
               <div className="sm:col-span-3">

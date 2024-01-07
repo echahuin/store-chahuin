@@ -63,24 +63,31 @@ import addUserDb from "@/app/utils/addUserDb"
         
         const loginGoogle = async () => {
         
-            await signInWithPopup(auth, googleAuthProvider).then((result) => {
-                if(result?.operationType === 'signIn'){
-                    setUser({
-                        logged: true,
-                        email: result.user.providerData[0].email,
-                        uid: result.user.providerData[0].uid,
-                        displayName: result.user.providerData[0].displayName,
-                        photoURL: result.user.providerData[0].photoURL,
-                        phoneNumber: result.user.providerData[0].phoneNumber,
-                        rol: "client"
-                    })
-                }
+            const result = await signInWithPopup(auth, googleAuthProvider).then((result) => result)
+            if(result?.operationType === 'signIn'){
+                setUser({
+                    logged: true,
+                    email: result.user.providerData[0].email,
+                    uid: result.user.providerData[0].uid,
+                    displayName: result.user.providerData[0].displayName,
+                    photoURL: result.user.providerData[0].photoURL,
+                    phoneNumber: result.user.providerData[0].phoneNumber,
+                    rol: "client"
                 })
+            }
+            const value = {
+                email: result.user.providerData[0].email,
+                password: '',
+                displayName: result.user.providerData[0].displayName,
+                photoURL: result.user.providerData[0].photoURL,
+                phoneNumber: result.user.providerData[0].phoneNumber,
+            }
+            await addUserDb({...value, photoURL: result.user.providerData[0].photoURL})
 
         }
 
         useEffect(() => {
-            onAuthStateChanged(auth, async (user) => {                
+            onAuthStateChanged(auth, async (user) => {
                 if (user) {
                     const docRef = doc(db, "users", user.email);
                     const userDoc = await getDoc(docRef);
@@ -107,18 +114,6 @@ import addUserDb from "@/app/utils/addUserDb"
                             rol: null
                         })
                     }
-                
-                // if (user) {
-                //         setUser({
-                //             logged: true,
-                //             email: user.email,
-                //             uid: user.uid,
-                //             displayName: user.displayName,
-                //             photoURL: user.photoURL,
-                //             phoneNumber: user.phoneNumber,
-                //             rol: user.rol
-                //         })
-                //     }
             })
         }, []);
    

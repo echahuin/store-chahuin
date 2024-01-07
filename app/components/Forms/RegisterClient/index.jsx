@@ -40,7 +40,7 @@ const RegisterClient = () => {
       <div className={styles.contTypeRegister}>
       <form onSubmit={handleSubmit}>
           <div>
-            <div className="border-b border-gray-900/10 p-5 pb-8 pt-11">
+            <div className=" border-gray-900/10 p-5 pb-8 pt-11">
             <h2 className="text-center font-semibold leading-7 text-gray-900 pb-9">Necesitas Registrate</h2>
             <div className="mt-19 grid grid-cols-1 gap-x-2 gap-y-8 sm:grid-cols-6">
               <div className="sm:col-span-3">
