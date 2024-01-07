@@ -12,20 +12,22 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: rgb(222, 221, 221);
+    // background: rgb(255, 255, 255);
     padding: 1.5rem;
+    // position: fixed;
+    z-index: 50;
 }
 
 .listMenu ul li {
     text-transform: capitalize;
     padding: .4rem 0rem;
 }
-.listMenu ul li a:hover {
-    font-weight: 600;
-}
+// .listMenu ul li a:hover {
+//     font-weight: 600;
+// }
 
   
-@media only screen and (max-width: 56.25rem){
+@media only screen and (max-width: 64rem){
     .contDetail {
         flex-direction: column;
         align-items: center;
@@ -39,7 +41,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         height: auto;
-        background: rgb(222, 221, 221);
+        // background: rgb(222, 221, 221);
         padding-top: 7.5rem;
     }
     .listMenu ul {

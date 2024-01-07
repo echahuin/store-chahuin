@@ -5,7 +5,8 @@ import styles from './styles.module.scss'
 const ProductList = ({filterData}) => {
 
   return (
-    <div className={styles.contCards}>
+    <div className={styles.containerCards}>
+      <div className={styles.contCards}>
       {
         filterData.map((item, index) => {
           return (
@@ -14,7 +15,8 @@ const ProductList = ({filterData}) => {
             </div>
             )
           })
-      }
+        }
+      </div>
     </div>
   )
 }

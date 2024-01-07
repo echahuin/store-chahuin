@@ -70,8 +70,7 @@ function Nav() {
                             alt="img logo"
                             />
                             {
-                                cart.length && 
-                                <div className={styles.totalItemCart} ><span>{cart.length}</span></div>
+                                cart.length === 0 ? null : <div className={styles.totalItemCart} ><span>{cart.length}</span></div>
                             }
                     </div>
                 </Link>

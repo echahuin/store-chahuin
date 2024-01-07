@@ -21,14 +21,14 @@ const ProductsLayout = async ({children, params}) => {
           <div className={styles.listMenu}>
             <ul>
               <li>
-                <Link  href={`/product/${category}/all`}>
+                <Link className="hover:text-blue-500" href={`/product/${category}/all`}>
                   Todos
                 </Link>
               </li>
               {subCategoriesFilter?.map((item, index) =>{
                 return (
-                  <li key={index}>
-                    <Link  href={`/product/${category}/${item}`}>
+                  <li  key={index}>
+                    <Link className="hover:text-blue-500" href={`/product/${category}/${item}`}>
                       {item}
                     </Link>
                   </li>

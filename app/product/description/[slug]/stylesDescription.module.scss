@@ -39,7 +39,7 @@
 .contPrice{
     padding: 2rem;
     // font-size: 2rem;
-    color: rgb(0, 0, 0);
+    color: rgb(26, 82, 225);
 }
 
 @media only screen and (max-width: 64rem){
@@ -59,6 +59,7 @@
 }
 @media only screen and (max-width: 28rem){
     .contDescription{
+        padding-top: 3rem;
         font-size: .9rem;
     }
     .contBannerSmallImg {
