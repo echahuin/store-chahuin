@@ -11,10 +11,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    // background: rgb(255, 255, 255);
+    // height: 100vh;
     padding: 1.5rem;
-    // position: fixed;
     z-index: 50;
 }
 
@@ -22,9 +20,9 @@
     text-transform: capitalize;
     padding: .4rem 0rem;
 }
-// .listMenu ul li a:hover {
-//     font-weight: 600;
-// }
+.listMenu ul li a:hover {
+    font-weight: 600;
+}
 
   
 @media only screen and (max-width: 64rem){

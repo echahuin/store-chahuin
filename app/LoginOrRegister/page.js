@@ -14,10 +14,10 @@ const LoginOrRegister = () => {
  return (
   <div className={styles.contLoginOrOrder}>
       {
-        !typeFormLogin ? < RegisterClient /> : < LoginClient />
+        !typeFormLogin ? < LoginClient /> : < RegisterClient />  
       }
       <div className="text-center font-semibold leading-7 text-gray-900 pt-9">
-          <p>¿Ya tienes una cuenta?</p>
+          <p>¿Ya tenés una cuenta?</p>
           <div className='cursor-pointer text-blue-500'  onClick={()=>setTypeFormLogin(!typeFormLogin)}>
               { !typeFormLogin ?  <p >Inicia sesión</p> : <p>Registarse</p> }
           </div>

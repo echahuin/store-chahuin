@@ -1,6 +1,5 @@
 .containerCards{
     height: 100vh;
-    // background-color: #cc1515;
     overflow: auto;
     
 }
@@ -13,7 +12,6 @@
     padding: 1rem;
     padding-top: 12rem;
     margin-bottom: 5rem;
-    // background-color: #21a826;
 }
 
 @media only screen and (max-width: 64rem){
@@ -28,5 +26,6 @@
     .contCards{
         padding: .1rem;
         padding-top: 0rem;
+        padding-bottom: 5rem;
     }
 }

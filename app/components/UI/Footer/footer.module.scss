@@ -1,0 +1,65 @@
+.footer{
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem 15rem;
+    margin-top: 9rem;
+}
+.footer p{
+    font-weight: 300;
+}
+.footer h2 {
+    padding: .7rem 0rem;
+    font-weight: 600;
+}
+.socialContact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: .5rem;
+}
+.socialContact a{
+   margin: .5rem;
+}
+.infoContact {
+    display: flex;
+    align-items: center;
+}
+.infoContact p{
+    margin: .5rem;
+    font-weight: 300;
+}
+.finFooter {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    padding: 0 1rem;  
+}
+.map {
+    height: 5rem;
+    width: 5rem;
+}
+@media only screen and (max-width: 64rem){
+    .footer{
+        padding: 2rem 1rem;
+        padding-bottom: 0;
+    }
+    .footer p{
+        font-size: .85rem;
+    }
+    .finFooter {
+        flex-direction: column;
+        align-items: center;
+        font-size: .8rem;
+
+    }
+    .map {
+        margin: 1rem 0;
+    }
+    
+}
