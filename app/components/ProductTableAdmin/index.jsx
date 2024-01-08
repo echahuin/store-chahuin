@@ -31,7 +31,7 @@ const ProductTableAdmin = async() => {
             {items.map((item, index)=>{
               return (
                 <tr key={index}>
-                    <td><Image src={item.img} width={50} height={50} alt=''/></td>
+                    <td><Image src={item.img} width={50} height={50} alt={`${item.img}`}/></td>
                     <td>{item.category}</td>
                     <td>{item.description.substring(0, 30) + '...'}</td>
                     <td>{item.price}</td>

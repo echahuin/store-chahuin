@@ -12,6 +12,16 @@
     width: 30%;
     height: 80%;
 }
+.headDetail{
+    border: 1px solid rgb(230, 230, 230) ;
+    padding: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .contTextBannerSmall{
     height: 60%;
     width: 40%;
@@ -33,6 +43,7 @@
     margin-bottom: 1rem;
 }
 .contTextBannerSmall h4{
+    font-weight: 300;
     text-transform: uppercase;
 }
 
@@ -55,6 +66,11 @@
     .contTextBannerSmall {
         width: 80%;
     }
+    .contTextBannerSmall h4{
+        // margin-top: 1rem;
+        font-size: 1rem;
+        // margin-bottom: 1rem;
+    }
 }
 @media only screen and (max-width: 28rem){
     .contDescription{
@@ -76,5 +92,10 @@
         font-size: 1.2rem;
         font-weight: 700;
         margin-bottom: 1rem;
+    }
+    .contTextBannerSmall h4{
+        // margin-top: 1rem;
+        font-size: .8rem;
+        // margin-bottom: 1rem;
     }
 }

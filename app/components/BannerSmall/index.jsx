@@ -14,7 +14,7 @@ function BannerSmall({data}) {
     <div style={{background: `${color}`}} className={styles.bannerSmall} >
       <div className={styles.contTextBannerSmall} >
               <h4>{category}</h4>
-              <h1>{truncateWords(titleBanner, 21)}</h1>
+              <h1>{truncateWords(titleBanner, 25)}</h1>
             <div className={styles.buttonDetail}>
               <Link  href={`/product/${category}/all`}>
                 <ButtonSmall text="Ver mas"/>
@@ -26,7 +26,7 @@ function BannerSmall({data}) {
               style={{objectFit: "cover"}}
               src={image}
               fill={true}
-              alt={`img ${category}`}
+              alt={`img ${image}`}
               />
         </div>
     </div>

@@ -21,11 +21,11 @@ function Card({ data }) {
             alt={`img ${name}`}
             />
         </div>
-        <div className={styles.descriptionCard}>
+        <div className={styles.descriptionCard} style={stock != 0 ? {}: { }}>
           <h1>{truncateWords(title, 20)}</h1>
-          <p>{truncateWords(description, 28)}</p>
+          <p>{truncateWords(description, 60)}</p>
           <div className={styles.footerData}>
-            <span className={``} >Stock: {stock}</span>
+            <span style={stock != 0 ? {}: { color: 'red'}} >Stock: {stock}</span>
             <h3>{price}$</h3>
           </div>
         </div>

@@ -51,7 +51,7 @@ function PrincipalBanner() {
                   src={src}
                   width={100}
                   height={100}
-                  alt={`electronics banner ${index}`}
+                  alt={`electronics banner ${index} ${src}`}
                 />
               </div>
             )

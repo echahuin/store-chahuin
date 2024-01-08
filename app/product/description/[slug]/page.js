@@ -3,12 +3,13 @@ import Image from 'next/image'
 import styles from './stylesDescription.module.scss'
 import getProductCategorySlug from '@/app/utils/getProductCategorySlug'
 import ControllerProduct from '@/app/components/ControllerProduct'
+import SubCategory from '../../[category]/[subCategory]/page'
 
 
 const Description = async({params}) => {
 
   const response = await getProductCategorySlug(params)
-  const {title, img, name, description, price} = response
+  const {title, img, category, subCategory, stock, description, price} = response
 
     return (
       <div className={styles.contDescription}>
@@ -17,11 +18,14 @@ const Description = async({params}) => {
               style={{objectFit: "cover"}}
               src={img}
               fill={true}
-              alt={`img`}
+              alt={`img ${img}`}
               />
         </div>
         <div className={styles.contTextBannerSmall} >
-            <h4>{name}</h4>
+            <div className={styles.headDetail}>
+              <h4>{category}-{subCategory}</h4>
+              <h4 style={{color: 'red'}}>{stock === 0 ? `Stock: ${stock}`: ''}</h4>
+            </div>
             <div className={styles.contDetailText} >
                 <h1>{title}</h1>
                 <span>{description}</span>

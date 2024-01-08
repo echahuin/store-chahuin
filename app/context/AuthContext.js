@@ -12,10 +12,6 @@ import { doc, getDoc } from "firebase/firestore";
 import { db, storage } from "@/firebase/config"
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import addUserDb from "@/app/utils/addUserDb"
-// import { v4 as uuidv4 } from 'uuid';
-// import * as CryptoJS from 'crypto-js';
-
-
 
  const AuthContext = createContext()
 

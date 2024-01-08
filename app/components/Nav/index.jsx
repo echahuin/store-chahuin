@@ -7,7 +7,6 @@ import { useCartContext } from '@/app/context/CartContext';
 import { useAuthContext } from '@/app/context/AuthContext';
 import ButtonLogout from '../UI/ButtonLogout';
 
-
 function Nav() {
 
     const { cart } = useCartContext()
@@ -40,14 +39,14 @@ function Nav() {
                         <Image
                             src={user.photoURL}
                             width={45}
-                            height={45}
-                            alt="img logo"
+                            height={60}
+                            alt="img Photo url"
                         />:
                         <Image
                             src="/user.png"
                             width={45}
                             height={45}
-                            alt="img logo"
+                            alt="img logo user"
                         />}
                     <span>{user.displayName}</span>
                 </div>
@@ -67,7 +66,7 @@ function Nav() {
                             src="/carrito.png"
                             width={30}
                             height={30}
-                            alt="img logo"
+                            alt="img cart"
                             />
                             {
                                 cart.length === 0 ? null : <div className={styles.totalItemCart} ><span>{cart.length}</span></div>

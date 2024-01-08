@@ -19,7 +19,7 @@ const TemplateCar = ({ handleDelete, data }) => {
                     style={{objectFit: "cover"}}
                     src={data.img}
                     fill={true}
-                    alt={`img`}
+                    alt={`img ${data.img}`}
                     />
             </div>
             <div className={styles.contDetail}>

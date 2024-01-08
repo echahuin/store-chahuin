@@ -22,8 +22,8 @@ const Banner = ({products}) => {
                 </div>
                 <div className={styles.contText}>
                     {products && <div>
-                        <h1 className={styles.title}>{truncateWords(titleBanner, 21)}</h1>
-                        <p className={styles.subtitle}>{truncateWords(descriptionBanner, 35)}</p>
+                        <h1 className={styles.title}>{truncateWords(titleBanner, 30)}</h1>
+                        <p className={styles.subtitle}>{truncateWords(descriptionBanner, 60)}</p>
                     </div>}
                     <Link  href={`/product/${category}/all`}>
                         <ButtonSmall text="Ver mas"/>
