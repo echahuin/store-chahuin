@@ -31,7 +31,6 @@ const RegisterClient = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       const ret = await registerUser(values, file);
-      console.log(ret)
       if(ret?.ok){
         location.reload()
       }if(ret?.error?.code === 'auth/email-already-in-use'){
@@ -68,28 +67,28 @@ const RegisterClient = () => {
               <div className="sm:col-span-3">
                 <label for="displayName" className="block text-sm font-medium leading-6 text-gray-900">Nombre</label>
                 <div className="mt-2">
-                  <input onChange={handleChange} type="text" name="displayName" id="displayName" autocomplete="given-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                  <input onChange={handleChange} placeholder='Nombre' type="text" name="displayName" id="displayName" autocomplete="given-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                 </div>
               </div>
   
               <div className="sm:col-span-3">
                 <label for="phoneNumber" className="block text-sm font-medium leading-6 text-gray-900">Número de telefono</label>
                 <div className="mt-2">
-                  <input onChange={handleChange} type="text" name="phoneNumber" id="phoneNumber" autocomplete="phone-number" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                  <input onChange={handleChange} placeholder='1112345678' type="text" name="phoneNumber" id="phoneNumber" autocomplete="phone-number" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                 </div>
               </div>
   
               <div className="sm:col-span-3">
                 <label for="email" className="block text-sm font-medium leading-6 text-gray-900">Email</label>
                 <div className="mt-2">
-                  <input onChange={handleChange} type="text" name="email" id="email" autocomplete="email" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                  <input onChange={handleChange} placeholder='example@gmail.com' type="email" name="email" id="email" autocomplete="email" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                 </div>
               </div>
   
               <div className="sm:col-span-3">
                 <label for="password" className="block text-sm font-medium leading-6 text-gray-900">Contraseña</label>
                 <div className="mt-2">
-                  <input onChange={handleChange} type="password" name="password" id="password" autocomplete="phone-number" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                  <input onChange={handleChange} placeholder='********' type="password" name="password" id="password" autocomplete="phone-number" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                 </div>
               </div>
   

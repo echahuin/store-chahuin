@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 15rem;
 }
 .fotoPerfilInput {
     background-color: #fff;
@@ -57,5 +58,8 @@
   @media only screen and (max-width: 64rem){
     .fotoPerfilInput {
         width: 12rem;
+    }
+    .contTypeRegister{
+      margin-top: 15rem;
     }
 }

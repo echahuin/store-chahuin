@@ -1,12 +1,12 @@
 .contTable{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
+    margin: 2rem auto;
     height: auto;
     padding-top: 0rem;
-    overflow: hidden !important;
-    // background-color: #931717;
+    overflow: scroll
 }
 .contTable h1{
     font-size: 2rem;
@@ -53,7 +53,6 @@
     margin: 1rem;
 }
 .controlHeadTables{
-    // padding-top: 15rem;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -83,11 +82,7 @@
         font-size: .9rem;
     }
     .contTable table tbody tr td{
-
         padding: 5px 5px;
-        // color: #000;
         font-size: .9rem;
-        // font-weight: 300;
-        // border-bottom: 1px solid #000000;
     }
 }

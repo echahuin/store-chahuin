@@ -21,7 +21,21 @@
 @media only screen and (max-width: 64rem){
 
     .contPanelAdmin{
-        padding-top: 10rem
+        padding-top: 7rem
+    }
+    .contMenuAdmin{
+        gap: 1.5rem;
+        margin-bottom: 3rem;
     }
 
+}
+
+@media only screen and (max-width: 28rem){
+    .contPanelAdmin{
+        padding-top: 6rem
+    }
+    .contMenuAdmin{
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
 }

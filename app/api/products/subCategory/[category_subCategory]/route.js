@@ -13,7 +13,6 @@ export async function GET(_, {params}) {
 
     const {category_subCategory} = await params  
     const [category, subCategory] = getCategoryAndSubcategory(category_subCategory);
-    console.log(category, subCategory)
     
     if(subCategory === 'all') {
     
