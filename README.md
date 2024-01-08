@@ -14,11 +14,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Testing data
 
 ##### User Admin
-email `admin@gmail.com`
+email `admin@gmail.com`  
 password: `admin1234`
 
 ##### User Client
-email `client@gmail.com`
+email `client@gmail.com`  
 password: `client1234`
 
 ## Deploy on Vercel
