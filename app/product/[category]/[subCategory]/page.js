@@ -3,6 +3,12 @@ import getProductSubCategory from '@/app/utils/getProductSubCategory'
 import React, { Suspense } from 'react'
 import Loading from '@/app/components/UI/Loading'
 
+export const generateMetadata = async ({params}) => {
+  return {
+      title: 'store-chahuin - ' + params.category
+  }
+}
+
 const SubCategory = async ({params}) => {
 
     const { category, subCategory } = params
