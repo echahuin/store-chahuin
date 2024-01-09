@@ -3,14 +3,11 @@ import React, {useState} from 'react'
 import styles from './styles.module.scss'
 import ButtonSmall from '@/app/components/UI/ButtonSmall'
 import { useAuthContext } from '@/app/context/AuthContext'
-import { useRouter } from 'next/navigation'
-import { useCartContext } from '@/app/context/CartContext'
 
 const RegisterClient = () => {
 
-    const router = useRouter()
     const { registerUser } = useAuthContext();
-    const { cart } = useCartContext();
+    
     const [file, setFile] = useState(null)
     const [alertMessage, setAlertMessage] = useState();
     const [values, setValues] = useState({
@@ -35,13 +32,7 @@ const RegisterClient = () => {
       e.preventDefault();
       const ret = await registerUser(values, file);
       if(ret?.ok){
-      if(cart.length > 0){
-        router.push('/cart')
-      }
-      if (cart.length === 0) {
-        router.push('/')
-      }
-        router.push('/')
+        location.href = "/";
       }if(ret?.error?.code === 'auth/email-already-in-use'){
         const id = setInterval(updateMessage('Ya estas registrado'), 2000);
         setTimeout(() => {

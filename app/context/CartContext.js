@@ -1,5 +1,6 @@
 "use client"
 import { createContext, useContext, useState } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const CartContext = createContext();
 
@@ -8,6 +9,7 @@ export const useCartContext = () => useContext(CartContext);
 export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
+    const [storedValue, setValue] = useLocalStorage("cart", cart);
 
     const addToCart = (product) => {
         if (isInCart(product)) {
@@ -19,10 +21,15 @@ export const CartProvider = ({ children }) => {
                 }
             });
             setCart(newCart);
+            setValue(product);
+
             return;
         } else{
+            // setValue()
             setCart((prevCart) => [product, ...prevCart]);
+            setValue(cart);
         }
+        setValue(product);
     }
 
     const removeFromCart = (product) => {
