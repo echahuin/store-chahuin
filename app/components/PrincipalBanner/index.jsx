@@ -12,7 +12,7 @@ function PrincipalBanner() {
     dots: true,
 	  fade:true,
     infinite: true,
-    speed: 2000,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true, 
