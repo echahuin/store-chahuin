@@ -23,7 +23,7 @@ function Card({ data }) {
         </div>
         <div className={styles.descriptionCard} style={stock != 0 ? {}: { }}>
           <h1>{truncateWords(title, 20)}</h1>
-          <p>{truncateWords(description, 60)}</p>
+          <p>{truncateWords(description, 55)}</p>
           <div className={styles.footerData}>
             <span style={stock != 0 ? {}: { color: 'red'}} >Stock: {stock}</span>
             <h3>{price}$</h3>
